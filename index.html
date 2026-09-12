@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordan Rivers — Instructional Design & eLearning Development</title>
+<style>
+  :root{
+    --ink:#10203A;
+    --chalk:#F0EFEA;
+    --gold:#D3A13B;
+    --rule:#C7CCC4;
+    --text:#1E2430;
+    --text-soft:#4A5163;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--chalk);
+    color:var(--text);
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height:1.55;
+  }
+  h1, h2, h3{
+    font-family:Charter, Georgia, "Times New Roman", serif;
+    font-weight:600;
+    margin:0;
+    color:var(--ink);
+  }
+  a{color:inherit;}
+  .wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* Header */
+  header{
+    position:sticky;
+    top:0;
+    background:rgba(240,239,234,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--rule);
+    z-index:10;
+  }
+  header .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:16px;
+    padding-bottom:16px;
+  }
+  .mark{
+    font-family:Charter, Georgia, serif;
+    font-weight:600;
+    font-size:1.1rem;
+    color:var(--ink);
+    text-decoration:none;
+  }
+  nav a{
+    text-decoration:none;
+    margin-left:28px;
+    font-size:0.95rem;
+    color:var(--text-soft);
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+  }
+  nav a:hover{
+    color:var(--ink);
+    border-bottom-color:var(--gold);
+  }
+
+  /* Hero */
+  .hero{
+    background:var(--ink);
+    color:var(--chalk);
+    background-image:
+      radial-gradient(circle, rgba(240,239,234,0.08) 1px, transparent 1px);
+    background-size:22px 22px;
+    padding:96px 0 80px;
+  }
+  .hero .eyebrow-line{
+    width:40px;
+    height:3px;
+    background:var(--gold);
+    margin-bottom:22px;
+  }
+  .hero h1{
+    color:var(--chalk);
+    font-size:clamp(2.1rem, 4.5vw, 3.1rem);
+    line-height:1.15;
+    max-width:14ch;
+  }
+  .hero p{
+    max-width:52ch;
+    color:#CBD1D9;
+    font-size:1.08rem;
+    margin-top:20px;
+  }
+  .hero .role{
+    margin-top:28px;
+    font-size:0.98rem;
+    color:var(--gold);
+  }
+
+  section{padding:72px 0;}
+  section h2{
+    font-size:1.6rem;
+    margin-bottom:8px;
+  }
+  section > .wrap > p.lede{
+    color:var(--text-soft);
+    max-width:56ch;
+    margin-top:0;
+    margin-bottom:40px;
+  }
+
+  /* Work grid */
+  .work-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+  }
+  .card{
+    background:#fff;
+    border-left:4px solid var(--gold);
+    padding:24px 26px;
+  }
+  .card .tag{
+    font-size:0.78rem;
+    color:var(--text-soft);
+    letter-spacing:0.02em;
+  }
+  .card h3{
+    font-size:1.15rem;
+    margin-top:8px;
+  }
+  .card p{
+    color:var(--text-soft);
+    font-size:0.95rem;
+    margin:10px 0 16px;
+  }
+  .card .stat{
+    font-size:0.88rem;
+    color:var(--ink);
+    font-weight:600;
+    margin-bottom:14px;
+  }
+  .card a.launch{
+    display:inline-block;
+    font-size:0.92rem;
+    text-decoration:none;
+    color:var(--ink);
+    border-bottom:1px solid var(--gold);
+    padding-bottom:1px;
+  }
+  .card a.launch:hover{color:var(--gold);}
+
+  /* Process */
+  .process{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+  }
+  .process .step .num{
+    font-family:Charter, Georgia, serif;
+    font-size:1.6rem;
+    color:var(--gold);
+  }
+  .process .step h3{
+    font-size:1.05rem;
+    margin-top:6px;
+  }
+  .process .step p{
+    color:var(--text-soft);
+    font-size:0.94rem;
+    margin-top:8px;
+  }
+
+  /* About */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:40px;
+    align-items:start;
+  }
+  .about-grid p{
+    color:var(--text-soft);
+    font-size:1rem;
+    max-width:58ch;
+  }
+  .skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    padding:0;
+    margin:0;
+    list-style:none;
+  }
+  .skills li{
+    border:1px solid var(--rule);
+    padding:6px 12px;
+    font-size:0.86rem;
+    color:var(--text-soft);
+  }
+
+  /* Contact */
+  .contact{
+    background:var(--ink);
+    color:var(--chalk);
+  }
+  .contact h2{color:var(--chalk);}
+  .contact p{color:#CBD1D9; max-width:48ch;}
+  .contact a.email{
+    display:inline-block;
+    margin-top:20px;
+    font-size:1.1rem;
+    color:var(--gold);
+    text-decoration:none;
+    border-bottom:1px solid var(--gold);
+  }
+  .contact .links{
+    margin-top:28px;
+    display:flex;
+    gap:24px;
+    font-size:0.92rem;
+  }
+  .contact .links a{text-decoration:none; color:#CBD1D9;}
+  .contact .links a:hover{color:var(--gold);}
+
+  footer{
+    padding:24px 0;
+    font-size:0.82rem;
+    color:var(--text-soft);
+    border-top:1px solid var(--rule);
+  }
+
+  @media (max-width: 680px){
+    .work-grid, .process, .about-grid{grid-template-columns:1fr;}
+    nav a{margin-left:16px; font-size:0.88rem;}
+    .hero{padding:72px 0 56px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="mark" href="#top">Jordan Rivers</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow-line"></div>
+    <h1>Learning experiences people actually finish.</h1>
+    <p>I design and build eLearning that turns dense subject matter into courses learners can follow, remember, and use on the job.</p>
+    <div class="role">Instructional Designer &amp; eLearning Developer — Articulate Storyline 360</div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Selected work</h2>
+    <p class="lede">A few recent courses, built end-to-end from learning objectives to published output.</p>
+
+    <div class="work-grid">
+      <div class="card">
+        <div class="tag">Compliance training · Storyline 360</div>
+        <h3>Workplace Safety Refresher</h3>
+        <div class="stat">Completion rate up from 61% to 94%</div>
+        <p>Rebuilt a text-heavy annual compliance module into a scenario-based course with branching decisions and a scored knowledge check.</p>
+        <a class="launch" href="course1/index.html">Launch course</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Software onboarding · Storyline 360</div>
+        <h3>New Hire CRM Walkthrough</h3>
+        <div class="stat">Onboarding time cut by 3 days</div>
+        <p>Interactive click-through simulation of the CRM, paired with short knowledge checks after each core workflow.</p>
+        <a class="launch" href="course2/index.html">Launch course</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Sales enablement · Storyline 360</div>
+        <h3>Product Launch Playbook</h3>
+        <div class="stat">Rolled out to 400+ reps in one week</div>
+        <p>Self-paced module covering positioning, objection handling, and a practice conversation with branching dialogue.</p>
+        <a class="launch" href="course3/index.html">Launch course</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Leadership development · Storyline 360</div>
+        <h3>Coaching Conversations Series</h3>
+        <div class="stat">Three-part microlearning series</div>
+        <p>Short, video-anchored lessons with reflection prompts, designed to be completed in under 10 minutes each.</p>
+        <a class="launch" href="course4/index.html">Launch course</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How I work</h2>
+    <p class="lede">A short, consistent process from brief to published course.</p>
+    <div class="process">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Analyze &amp; design</h3>
+        <p>Clarify the performance gap, define objectives, and storyboard the learning flow before opening any tool.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Build &amp; prototype</h3>
+        <p>Develop in Storyline with a working prototype early, so stakeholders can react to something real, not a script.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Test &amp; refine</h3>
+        <p>Run it with real users, fix friction points, then publish and track how it performs after launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <h2>About</h2>
+        <p>I'm an instructional designer and eLearning developer focused on courses that hold up after the "wow, nice interaction" moment — ones people can actually complete, recall, and apply. My background spans corporate compliance, software onboarding, and sales enablement, usually working closely with subject matter experts who know the content but not the tools.</p>
+        <p>Outside of Storyline, I work in Camtasia for video editing, Figma for visual design and wireframes, and whatever LMS a client already has in place.</p>
+      </div>
+      <div>
+        <h3 style="font-size:1rem; margin-bottom:14px;">Tools &amp; skills</h3>
+        <ul class="skills">
+          <li>Articulate Storyline 360</li>
+          <li>Rise 360</li>
+          <li>SCORM &amp; xAPI</li>
+          <li>Camtasia</li>
+          <li>Figma</li>
+          <li>Instructional design (ADDIE)</li>
+          <li>Scenario-based learning</li>
+          <li>Voiceover &amp; scripting</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's build something</h2>
+    <p>Open to freelance projects and full-time roles in instructional design and eLearning development.</p>
+    <a class="email" href="mailto:you@example.com">you@example.com</a>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    &copy; 2026 Jordan Rivers. Built and published from GitHub via Cloudflare Pages.
+  </div>
+</footer>
+
+</body>
+</html>
