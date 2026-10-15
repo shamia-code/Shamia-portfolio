@@ -1,0 +1,38 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="optC_visual" itemID="69d4f777-000003ee" lastModified="1778752550">
+  <timeline>
+    <DOMTimeline name="optC_visual" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E6E6E6"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-1692 -890|1729 -890!1729 -890|1729 890!1729 890|-1692 890!-1692 890|-1692 -890"/>
+                    <Edge cubics="!1729 -890(;1729,-890 1729,890 1729,890q1729 -890 1729 890);"/>
+                    <Edge cubics="!-1692 890(;-1692,890 -1692,-890 -1692,-890q-1692 890 -1692 -890);"/>
+                    <Edge cubics="!1729 890(;1729,890 -1692,890 -1692,890q1729 890 -1692 890);"/>
+                    <Edge cubics="!-1692 -890(;-1692,-890 1729,-890 1729,-890q-1692 -890 1729 -890);"/>
+                  </edges>
+                </DOMShape>
+                <DOMSymbolInstance libraryItemName="periodic table">
+                  <matrix>
+                    <Matrix a="1.13677978515625" d="1.07438659667969" tx="9.05" ty="0.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

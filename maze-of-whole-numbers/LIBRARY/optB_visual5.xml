@@ -1,0 +1,43 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="optB_visual5" itemID="69d8b358-00000222" lastModified="1775809478">
+  <timeline>
+    <DOMTimeline name="optB_visual5" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-1729 -843|1728 -843!1728 -843|1728 843!1728 843|-1729 843!-1729 843|-1729 -843"/>
+                    <Edge cubics="!-1729 843(;-1729,843 -1729,-843 -1729,-843q-1729 843 -1729 -843);"/>
+                    <Edge cubics="!1728 -843(;1728,-843 1728,843 1728,843q1728 -843 1728 843);"/>
+                    <Edge cubics="!1728 843(;1728,843 -1729,843 -1729,843q1728 843 -1729 843);"/>
+                    <Edge cubics="!-1729 -843(;-1729,-843 1728,-843 1728,-843q-1729 -843 1728 -843);"/>
+                  </edges>
+                </DOMShape>
+                <DOMDynamicText fontRenderingMode="standard" left="4.8" width="144.95" height="80.05" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="-77.25" ty="-39.3"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>A substance made of single atoms</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="21.9" size="18" bitmapSize="360" face="Verdana"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

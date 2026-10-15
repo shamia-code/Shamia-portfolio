@@ -1,0 +1,170 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="QuestionPanel" itemID="69ce60b9-00000174" lastModified="1791979143">
+  <persistentData>
+    <PD n="CreateJSToolkit_timelinedata" v="version&#xA;0.1&#xA;loop&#xA;false"/>
+  </persistentData>
+  <timeline>
+    <DOMTimeline name="QuestionPanel" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_2" color="#9933CC" locked="true" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="qText" selected="true" fontRenderingMode="standard" top="21.65" width="793.9" height="50.15" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="-382.45" ty="-331.15"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="50.15" size="40" bitmapSize="800" face="Orbitron-Regular" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor alpha="0.00392156862745098"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#0000FF"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.1">
+                        <fill>
+                          <SolidColor color="#5F5F5F" alpha="0"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                    <StrokeStyle index="2">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#5F5F5F" alpha="0.23921568627451"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!14689 -6331|15674 -6331!15674 -6331|15674 -4474!15674 -4474|14689 -4474!14689 -4474|14689 -6331!-2340 -7764|-2340 -8011!-2340 -8011|1126 -8011!1126 -8011|1126 -7680"/>
+                    <Edge fillStyle1="1" strokeStyle="2" edges="!-12858 -4399|-12858 -4465!-9818 -4465|-9818 -4399"/>
+                    <Edge fillStyle0="1" edges="!-9818 -4465|-12858 -4465"/>
+                    <Edge fillStyle1="1" edges="!-9818 -4399|-12858 -4399"/>
+                    <Edge strokeStyle="2" edges="!-9892 -2452|-9892 -2396"/>
+                    <Edge fillStyle1="3" strokeStyle="2" edges="!-12718 -2894[-12723 #FFF49A.FE -12723 -2942!-12723 -2942[-12723 #FFF469.02 -12718 -2990"/>
+                    <Edge fillStyle0="3" edges="!-12718 -2894|-12718 -2990"/>
+                    <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="!-2340 -7764|-89 -7764!-89 -7764|-89 -7680"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!-2340 -7680|-2340 -7764"/>
+                    <Edge strokeStyle="2" edges="!-6055 -6110|-6055 -6917!-6055 -6917|-2485 -6917!-2485 -6917|-2485 -6110"/>
+                    <Edge fillStyle1="2" edges="!1126 -7680|-89 -7680!-89 -7680|-2340 -7680"/>
+                    <Edge cubics="!14689 -6331(;14689,-6331 15674,-6331 15674,-6331q14689 -6331 15674 -6331);"/>
+                    <Edge cubics="!15674 -4474(;15674,-4474 14689,-4474 14689,-4474q15674 -4474 14689 -4474);"/>
+                    <Edge cubics="!14689 -4474(;14689,-4474 14689,-6331 14689,-6331q14689 -4474 14689 -6331);"/>
+                    <Edge cubics="!15674 -6331(;15674,-6331 15674,-4474 15674,-4474q15674 -6331 15674 -4474);"/>
+                    <Edge cubics="!-9892 -2452(;-9892,-2452 -9892,-2396 -9892,-2396q-9892 -2452 -9892 -2396);"/>
+                    <Edge cubics="!-12718 -2894(;-12721,-2906 -12723,-2924 -12723,-2942q-12718 -2894 -12723 -2942);"/>
+                    <Edge cubics="!-12723 -2942(;-12723,-2957 -12722,-2971 -12718,-2990q-12723 -2942 -12718 -2990);"/>
+                    <Edge cubics="!-89 -7764(;-89,-7764 -89,-7680 -89,-7680q-89 -7764 -89 -7680);"/>
+                    <Edge cubics="!-2340 -7680(;-2340,-7680 -2340,-7764 -2340,-7764q-2340 -7680 -2340 -7764);"/>
+                    <Edge cubics="!-89 -7680(;-89,-7680 -2340,-7680 -2340,-7680q-89 -7680 -2340 -7680);"/>
+                    <Edge cubics="!-2340 -7764(;-2340,-7764 -89,-7764 -89,-7764q-2340 -7764 -89 -7764);"/>
+                    <Edge cubics="!1126 -7680(;1126,-7680 -89,-7680 -89,-7680q1126 -7680 -89 -7680);"/>
+                    <Edge cubics="!-2340 -8011(;-2340,-8011 1126,-8011 1126,-8011q-2340 -8011 1126 -8011);"/>
+                    <Edge cubics="!-9818 -4399(;-9818,-4399 -12858,-4399 -12858,-4399q-9818 -4399 -12858 -4399);"/>
+                    <Edge cubics="!-12718 -2894(;-12718,-2894 -12718,-2990 -12718,-2990q-12718 -2894 -12718 -2990);"/>
+                    <Edge cubics="!-12858 -6239(;-12858,-6239 -9818,-6239 -9818,-6239q-12858 -6239 -9818 -6239);"/>
+                    <Edge cubics="!-12858 -4399(;-12858,-4399 -12858,-4465 -12858,-4465q-12858 -4399 -12858 -4465);"/>
+                    <Edge cubics="!-12858 -4465(;-12858,-4465 -12858,-6239 -12858,-6239q-12858 -4465 -12858 -6239);"/>
+                    <Edge cubics="!-6055 -5068(;-6055,-5068 -6055,-5338 -6055,-5338q-6055 -5068 -6055 -5338);"/>
+                    <Edge cubics="!-2485 -5338(;-2485,-5338 -2485,-5068 -2485,-5068q-2485 -5338 -2485 -5068);"/>
+                    <Edge cubics="!1126 -8011(;1126,-8011 1126,-7680 1126,-7680q1126 -8011 1126 -7680);"/>
+                    <Edge cubics="!-6055 -6917(;-6055,-6917 -2485,-6917 -2485,-6917q-6055 -6917 -2485 -6917);"/>
+                    <Edge cubics="!-2340 -7764(;-2340,-7764 -2340,-8011 -2340,-8011q-2340 -7764 -2340 -8011);"/>
+                    <Edge cubics="!-9818 -6239(;-9818,-6239 -9818,-4465 -9818,-4465q-9818 -6239 -9818 -4465);"/>
+                    <Edge cubics="!-9818 -4465(;-9818,-4465 -9818,-4399 -9818,-4399q-9818 -4465 -9818 -4399);"/>
+                    <Edge cubics="!-10661 -5462(;-10676,-5477 -10695,-5485 -10717,-5485q-10661 -5462Q-10684 -5485q-10717 -5485);"/>
+                    <Edge cubics="!-10717 -5485(;-10739,-5485 -10757,-5477 -10774,-5462q-10717 -5485Q-10750 -5485q-10774 -5462);"/>
+                    <Edge cubics="!-10660 -5349(;-10644,-5364 -10637,-5383 -10637,-5405q-10660 -5349Q-10637 -5372q-10637 -5405);"/>
+                    <Edge cubics="!-10661 -5348(;-10661,-5348 -10660,-5349 -10660,-5349q-10661 -5348 -10660 -5349);"/>
+                    <Edge cubics="!-10717 -5325(;-10695,-5325 -10676,-5332 -10661,-5348q-10717 -5325Q-10684 -5325q-10661 -5348);"/>
+                    <Edge cubics="!-10797 -5405(;-10797,-5383 -10789,-5364 -10774,-5349q-10797 -5405Q-10797 -5372q-10774 -5349);"/>
+                    <Edge cubics="!-10774 -5349(;-10757,-5332 -10739,-5325 -10717,-5325q-10774 -5349Q-10750 -5325q-10717 -5325);"/>
+                    <Edge cubics="!-10637 -5405(;-10637,-5427 -10644,-5445 -10661,-5462q-10637 -5405Q-10637 -5438q-10661 -5462);"/>
+                    <Edge cubics="!-10774 -5462(;-10789,-5445 -10797,-5427 -10797,-5405q-10774 -5462Q-10797 -5438q-10797 -5405);"/>
+                    <Edge cubics="!-10501 -5114(;-10516,-5129 -10535,-5137 -10557,-5137q-10501 -5114Q-10524 -5137q-10557 -5137);"/>
+                    <Edge cubics="!-10557 -5137(;-10579,-5137 -10597,-5129 -10614,-5114q-10557 -5137Q-10590 -5137q-10614 -5114);"/>
+                    <Edge cubics="!-10500 -5001(;-10484,-5016 -10477,-5035 -10477,-5057q-10500 -5001Q-10477 -5024q-10477 -5057);"/>
+                    <Edge cubics="!-10501 -5000(;-10501,-5000 -10500,-5001 -10500,-5001q-10501 -5000 -10500 -5001);"/>
+                    <Edge cubics="!-10557 -4977(;-10535,-4977 -10516,-4984 -10501,-5000q-10557 -4977Q-10524 -4977q-10501 -5000);"/>
+                    <Edge cubics="!-10637 -5057(;-10637,-5035 -10629,-5016 -10614,-5001q-10637 -5057Q-10637 -5024q-10614 -5001);"/>
+                    <Edge cubics="!-10614 -5001(;-10597,-4984 -10579,-4977 -10557,-4977q-10614 -5001Q-10590 -4977q-10557 -4977);"/>
+                    <Edge cubics="!-10477 -5057(;-10477,-5079 -10484,-5097 -10501,-5114q-10477 -5057Q-10477 -5090q-10501 -5114);"/>
+                    <Edge cubics="!-10614 -5114(;-10629,-5097 -10637,-5079 -10637,-5057q-10614 -5114Q-10637 -5090q-10637 -5057);"/>
+                    <Edge cubics="!-2485 -5068(;-2485,-5068 -6055,-5068 -6055,-5068q-2485 -5068 -6055 -5068);"/>
+                    <Edge cubics="!8793 -6106(;8791,-6110 8789,-6110 8786,-6110q8793 -6106Q8790 -6110q8786 -6110);"/>
+                    <Edge cubics="!8796 -6096(;8796,-6101 8795,-6103 8793,-6106q8796 -6096Q8796 -6103q8793 -6106);"/>
+                    <Edge cubics="!8793 -4795(;8795,-4797 8796,-4800 8796,-4804q8793 -4795Q8796 -4799q8796 -4804);"/>
+                    <Edge cubics="!8786 -4790(;8789,-4790 8791,-4792 8793,-4795q8786 -4790Q8790 -4790q8793 -4795);"/>
+                    <Edge cubics="!8796 -4804(;8796,-4804 8796,-6096 8796,-6096q8796 -4804 8796 -6096);"/>
+                    <Edge cubics="!-7441 -6106(;-7443,-6103 -7444,-6101 -7444,-6096q-7441 -6106Q-7444 -6103q-7444 -6096);"/>
+                    <Edge cubics="!-7434 -6110(;-7437,-6110 -7439,-6110 -7441,-6106q-7434 -6110Q-7438 -6110q-7441 -6106);"/>
+                    <Edge cubics="!-7441 -4795(;-7439,-4792 -7437,-4790 -7434,-4790q-7441 -4795Q-7438 -4790q-7434 -4790);"/>
+                    <Edge cubics="!-7444 -4804(;-7444,-4800 -7443,-4797 -7441,-4795q-7444 -4804Q-7444 -4799q-7441 -4795);"/>
+                    <Edge cubics="!-7444 -6096(;-7444,-6096 -7444,-4804 -7444,-4804q-7444 -6096 -7444 -4804);"/>
+                    <Edge cubics="!8786 -6110(;8786,-6110 -2485,-6110 -2485,-6110q8786 -6110 -2485 -6110);"/>
+                    <Edge cubics="!-2485 -6110(;-2485,-6110 -6055,-6110 -6055,-6110q-2485 -6110 -6055 -6110);"/>
+                    <Edge cubics="!-6055 -6110(;-6055,-6110 -7434,-6110 -7434,-6110q-6055 -6110 -7434 -6110);"/>
+                    <Edge cubics="!-2485 -6110(;-2485,-6110 -2485,-6098 -2485,-6098q-2485 -6110 -2485 -6098);"/>
+                    <Edge cubics="!-2485 -6917(;-2485,-6917 -2485,-6110 -2485,-6110q-2485 -6917 -2485 -6110);"/>
+                    <Edge cubics="!-6055 -6110(;-6055,-6110 -6055,-6917 -6055,-6917q-6055 -6110 -6055 -6917);"/>
+                    <Edge cubics="!-6055 -6098(;-6055,-6098 -6055,-6110 -6055,-6110q-6055 -6098 -6055 -6110);"/>
+                    <Edge cubics="!-7434 -4790(;-7434,-4790 8786,-4790 8786,-4790q-7434 -4790 8786 -4790);"/>
+                  </edges>
+                </DOMShape>
+                <DOMDynamicText name="fbText" fontRenderingMode="standard" top="-132.55" left="234.5" width="267.05" height="87" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="-342.5" ty="-240.15"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="22.55" size="18" bitmapSize="360" face="Orbitron-Regular" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText fontRenderingMode="standard" width="100" height="50.15" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="-542.45" ty="-343.75"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="50.15" size="40" bitmapSize="800" face="Orbitron-Regular" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

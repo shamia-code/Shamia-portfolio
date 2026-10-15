@@ -1,0 +1,94 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="optB_visual" itemID="69d4f5b0-000003e6" lastModified="1775564323">
+  <timeline>
+    <DOMTimeline name="optB_visual" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E6E6E6"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-5536 -853|-2180 -853!-2180 -853|-2180 767!-2180 767|-5536 767!-5536 767|-5536 -853"/>
+                    <Edge cubics="!-5536 767(;-5536,767 -5536,-853 -5536,-853q-5536 767 -5536 -853);"/>
+                    <Edge cubics="!-2180 -853(;-2180,-853 -2180,767 -2180,767q-2180 -853 -2180 767);"/>
+                    <Edge cubics="!-2180 767(;-2180,767 -5536,767 -5536,767q-2180 767 -5536 767);"/>
+                    <Edge cubics="!-5536 -853(;-5536,-853 -2180,-853 -2180,-853q-5536 -853 -2180 -853);"/>
+                  </edges>
+                </DOMShape>
+                <DOMSymbolInstance libraryItemName="blue ball2">
+                  <matrix>
+                    <Matrix tx="-215.15" ty="-17.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="blue ball2">
+                  <matrix>
+                    <Matrix tx="-168.95" ty="9.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="blue ball2">
+                  <matrix>
+                    <Matrix tx="-142.55" ty="-23.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="yellow ball">
+                  <matrix>
+                    <Matrix tx="-236.35" ty="9.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="yellow ball">
+                  <matrix>
+                    <Matrix tx="-181.55" ty="-17.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="yellow ball">
+                  <matrix>
+                    <Matrix tx="-137.5" ty="9.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="yellow ball">
+                  <matrix>
+                    <Matrix tx="-202.75" ty="9.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="yellow ball">
+                  <matrix>
+                    <Matrix tx="-253.15" ty="-23.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

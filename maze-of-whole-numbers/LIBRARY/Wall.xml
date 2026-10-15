@@ -1,0 +1,26 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Wall" itemID="69ce6923-0000018c" lastModified="1791976228">
+  <timeline>
+    <DOMTimeline name="Wall" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.00392156862745098"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!205 873|205 -986!205 -986[205 -991 166 -994!166 -994[127 -997 75 -997!75 -997[23 -997 -16 -994!-16 -994[-55 -991 -55 -986!-55 -986|-55 873!-55 873[-55 876 -16 879!-16 879[23 882 75 882!75 882[127 882 166 879!166 879[205 876 205 873"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

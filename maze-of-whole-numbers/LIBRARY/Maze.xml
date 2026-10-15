@@ -1,0 +1,133 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Maze" itemID="69ce4fe2-00000140" lastModified="1791973795">
+  <persistentData>
+    <PD n="CreateJSToolkit_timelinedata" v="version&#xA;0.1&#xA;loop&#xA;false"/>
+  </persistentData>
+  <timeline>
+    <DOMTimeline name="Maze" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_5" color="#009999">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#666600"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-5749 -6178|4812 -6178!4812 -6178|4812 -5377!4812 -5377|-5749 -5377!-5749 -5377|-5749 -6178"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="upper2.PNG">
+                  <matrix>
+                    <Matrix a="1.20048522949219" d="3.65245056152344" tx="-259" ty="-312"/>
+                  </matrix>
+                </DOMBitmapInstance>
+                <DOMBitmapInstance libraryItemName="lower.PNG">
+                  <matrix>
+                    <Matrix a="1.10206604003906" d="1.73367309570312" tx="-430" ty="230"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="white_maze" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="Textured_White_Labyrinth_on_Black-removebg-preview.png">
+                  <matrix>
+                    <Matrix a="1.81985473632812" d="1.46929931640625" tx="-596" ty="-266"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_3" color="#FF800A">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#666600"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#33FFFF"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-11212 -6510|8268 -6510!8268 -6510|8268 7011!8268 7011|-11212 7011!-11212 7011|-11212 -6510"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer_1" color="#00FFFF" locked="true" outline="true" useOutlineView="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.00392156862745098"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#5F5F5F" alpha="0.00784313725490196"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!8422 -3985S7|9556 -3985"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!8422 -3985S6|8422 -5360!8422 -5360|9556 -5360!9556 -5360|9556 -3985!8990 -1194|7938 -1194!7938 -1194|7938 -3985!7938 -3985|8422 -3985"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!9906 -1194S7|9879 -1194!10729 -3227|10729 -1194!10729 -1194|9906 -1194"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!10729 -3227S6|11634 -3227!11634 -3227|11634 590!11634 590|9906 590!9556 -3985|10729 -3985!10729 -3985|10729 -3227"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!9879 -1194S7|8990 -1194"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!9906 590S6|9906 1123!9906 1123|9879 1123!9879 1123|9879 590!9879 590|8990 590!8990 590|8990 -1194!-9931 -3824.5|-9931 -5641!-9931 -5641|7937 -5641!7937 -5641|7937 6063!7937 6063|-9931 6063!-9931 6063|-9931 -1423.5"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!9879 590S7|9879 -1194!9906 -1194|9906 590!-9931 -3824.5[#FFD9ED.23 #FFF01C.BB -9479 -4282!-9479 -4282[-8621 -4968 -7408 -4968!-7408 -4968[-6195 -4968 -5338 -4282!-5338 -4282[-4480 -3595 -4480 -2624!-4480 -2624[-4480 -1653 -5338 -967
+!-5338 -967[-6195 -280 -7408 -280!-7408 -280[-8621 -280 -9479 -967!-9479 -967[#FFD9ED.23 #FFFB62.95 -9931 -1423.5"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!-9931 -1423.5S6[-10336 #FFF85B.81 -10336 -2624!-10336 -2624[-10336 #FFF324.7F -9931 -3824.5"/>
+                  </edges>
+                </DOMShape>
+                <DOMBitmapInstance selected="true" libraryItemName="WhatsApp Image 2025-09-29 at 12.06.45_afc96b40.jpg">
+                  <matrix>
+                    <Matrix a="0.605316162109375" d="0.720916748046875" tx="-568" ty="-358"/>
+                  </matrix>
+                </DOMBitmapInstance>
+                <DOMBitmapInstance selected="true" libraryItemName="Maze without BKG-01.png">
+                  <matrix>
+                    <Matrix a="0.150848388671875" d="0.12310791015625" tx="-596" ty="-266"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

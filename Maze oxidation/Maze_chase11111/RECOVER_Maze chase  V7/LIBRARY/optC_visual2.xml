@@ -1,0 +1,78 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="optC_visual2" itemID="69d611ca-00000036" lastModified="1775637097">
+  <timeline>
+    <DOMTimeline name="optC_visual2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E6E6E6"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!1675 -809|-1675 -809!-1675 -809|-1675 810!-1675 810|1675 810!1675 810|1675 -809"/>
+                    <Edge cubics="!-1675 810(;-1675,810 -1675,-809 -1675,-809q-1675 810 -1675 -809);"/>
+                    <Edge cubics="!1675 810(;1675,810 -1675,810 -1675,810q1675 810 -1675 810);"/>
+                    <Edge cubics="!1675 810(;1675,810 1675,-809 1675,-809q1675 810 1675 -809);"/>
+                    <Edge cubics="!1675 -809(;1675,-809 -1675,-809 -1675,-809q1675 -809 -1675 -809);"/>
+                  </edges>
+                </DOMShape>
+                <DOMSymbolInstance libraryItemName="yellow ball">
+                  <matrix>
+                    <Matrix tx="-52.2" ty="-6.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="blue ball2">
+                  <matrix>
+                    <Matrix tx="-9.25" ty="-19.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="yellow ball">
+                  <matrix>
+                    <Matrix tx="24.6" ty="-15.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="blue ball2">
+                  <matrix>
+                    <Matrix tx="-16.85" ty="14.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="yellow ball">
+                  <matrix>
+                    <Matrix tx="25" ty="21.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="blue ball2">
+                  <matrix>
+                    <Matrix tx="52.65" ty="-6.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

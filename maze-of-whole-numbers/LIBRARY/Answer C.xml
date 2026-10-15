@@ -1,0 +1,125 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Answer C" itemID="69d4e628-00000271" symbolType="button" lastModified="1779435866">
+  <persistentData>
+    <PD n="CreateJSToolkit_timelinedata" v="version&#xA;0.1&#xA;loop&#xA;false"/>
+  </persistentData>
+  <timeline>
+    <DOMTimeline name="Answer C">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#5F5F5F" alpha="0.23921568627451"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!7770 890|7770 -890!7770 -890|11111 -890!11111 -890|11111 890!11111 890|7770 890"/>
+                    <Edge strokeStyle="1" edges="!1769 1247|1819 1247!1769 890|-1718 890"/>
+                    <Edge cubics="!1769 1247(;1769,1247 1819,1247 1819,1247q1769 1247 1819 1247);"/>
+                    <Edge cubics="!7770 890(;7770,890 7770,-890 7770,-890q7770 890 7770 -890);"/>
+                    <Edge cubics="!11111 890(;11111,890 7770,890 7770,890q11111 890 7770 890);"/>
+                    <Edge cubics="!11111 -890(;11111,-890 11111,890 11111,890q11111 -890 11111 890);"/>
+                    <Edge cubics="!7770 -890(;7770,-890 11111,-890 11111,-890q7770 -890 11111 -890);"/>
+                    <Edge cubics="!1769 890(;1769,890 -1718,890 -1718,890q1769 890 -1718 890);"/>
+                  </edges>
+                </DOMShape>
+                <DOMSymbolInstance libraryItemName="optC_visual" name="optC_visual0">
+                  <matrix>
+                    <Matrix a="0.935104370117188" tx="-477.25" ty="-53.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optC_visual2" name="optC_visual2">
+                  <matrix>
+                    <Matrix a="0.99688720703125" d="1.12388610839844" tx="0.05" ty="-1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.7" y="0.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optC_visual3" name="optC_visual3">
+                  <matrix>
+                    <Matrix a="1.00714111328125" d="1.13578796386719" tx="-177.85" ty="-207.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.05" y="-0.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optC_visual4" name="optC_visual4">
+                  <matrix>
+                    <Matrix a="0.98504638671875" d="1.2091064453125" tx="-302.8" ty="150.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optC_visual5" name="optC_visual5">
+                  <matrix>
+                    <Matrix a="0.99383544921875" d="1.17059326171875" tx="3.3" ty="0.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optC_visual6" name="optC_visual6">
+                  <matrix>
+                    <Matrix a="0.952621459960938" d="1.22552490234375" tx="-177.7" ty="-209.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.8" y="0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optC_visual7" name="optC_visual7">
+                  <matrix>
+                    <Matrix a="0.9517822265625" d="1.26341247558594" tx="-480.6" ty="-51.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1.1" y="-0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optC_visual8" name="optC_visual8">
+                  <matrix>
+                    <Matrix a="0.95782470703125" d="1.23814392089844" tx="-177.75" ty="-211.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.95" y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optC_visual9" name="optC_visual9">
+                  <matrix>
+                    <Matrix a="0.946624755859375" d="1.0985107421875" tx="-303" ty="152.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.25" y="0.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optC_visual10" name="optC_visual10">
+                  <matrix>
+                    <Matrix a="0.940902709960938" d="1.21287536621094" tx="-178.3" ty="-211.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

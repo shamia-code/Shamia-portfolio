@@ -1,0 +1,43 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="optA_visual2" itemID="69d60dd4-00000029" lastModified="1776929512">
+  <timeline>
+    <DOMTimeline name="optA_visual2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E6E6E6"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!1683 -87|-1684 -87!-1684 -87|-1684 1376!-1684 1376|1683 1376!1683 1376|1683 -87"/>
+                    <Edge cubics="!-1684 1376(;-1684,1376 -1684,-87 -1684,-87q-1684 1376 -1684 -87);"/>
+                    <Edge cubics="!1683 1376(;1683,1376 -1684,1376 -1684,1376q1683 1376 -1684 1376);"/>
+                    <Edge cubics="!1683 -87(;1683,-87 1683,1376 1683,1376q1683 -87 1683 1376);"/>
+                    <Edge cubics="!1683 -87(;1683,-87 -1684,-87 -1684,-87q1683 -87 -1684 -87);"/>
+                  </edges>
+                </DOMShape>
+                <DOMDynamicText fontRenderingMode="standard" top="18.6" width="164.5" height="71.65" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="-82.2" ty="-20.95"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Smallest building block of matter</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="21.9" size="18" bitmapSize="360" face="Verdana" fillColor="#0000CC"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

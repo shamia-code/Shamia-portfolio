@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Substation Seven Industrial Incident — Safety Training Module</title>
+<style>
+  :root {
+    --bg: #0d1f12;
+    --panel: #16301c;
+    --accent: #ff7a2e;
+    --warning: #ffb347;
+    --success: #2ecc71;
+    --danger: #e74c3c;
+    --text: #f0f5f0;
+    --muted: #a8c5a8;
+    --border: #2d5a3a;
+    --green-dark: #0a2a14;
+    --orange: #ff7a2e;
+    --green: #2ecc71;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(160deg, var(--bg), #0a1a10);
+    color: var(--text);
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+  #app { max-width: 1100px; margin: 0 auto; padding: 20px; }
+  header {
+    background: linear-gradient(90deg, #1a3d22, #2a5a35);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 { font-size: 1.4rem; color: var(--orange); letter-spacing: 1px; }
+  .progress { font-size: 0.9rem; color: var(--muted); }
+  .scene {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px;
+    margin-bottom: 16px;
+    display: none;
+    animation: fadeIn 0.4s ease;
+  }
+  .scene.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  h2 { color: var(--orange); margin-bottom: 8px; font-size: 1.5rem; }
+  .situation { background: var(--green-dark); border-left: 4px solid var(--orange); padding: 14px 18px; margin: 16px 0; border-radius: 0 6px 6px 0; font-size: 0.95rem; }
+  .standard { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+  .options { display: flex; flex-direction: column; gap: 10px; margin: 18px 0; }
+  .option-btn, .action-btn, .ext-btn {
+    background: #1e4028;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 14px 18px;
+    border-radius: 6px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+  }
+  .option-btn:hover, .action-btn:hover, .ext-btn:hover { border-color: var(--orange); background: #245030; }
+  .option-btn.correct, .ext-btn.correct { border-color: var(--success); background: #0d3320; }
+  .option-btn.wrong, .ext-btn.wrong { border-color: var(--danger); background: #3a1a1a; }
+  /* Flip cards */
+  .flip-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 18px 0; }
+  .flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    height: 280px;
+    cursor: pointer;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid var(--border);
+  }
+  .flip-card-front { background: #0a1a10; }
+  .flip-card-front img, .flip-card-back img { width: 100%; height: 100%; object-fit: cover; }
+  .flip-card-back {
+    background: var(--green-dark);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    color: var(--text);
+  }
+  .flip-card-back strong { color: var(--orange); font-size: 1.1rem; margin-bottom: 8px; }
+  /* Video-like slideshow */
+  .problem-video {
+    position: relative;
+    width: 100%;
+    max-height: 360px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 12px 0;
+    border: 2px solid var(--orange);
+  }
+  .problem-video img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: none;
+  }
+  .problem-video img.active { display: block; animation: fadeSlide 0.8s; }
+  @keyframes fadeSlide { from { opacity: 0; } to { opacity: 1; } }
+  .video-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: var(--orange);
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  /* Image option cards */
+  .image-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 16px 0; }
+  .image-option {
+    border: 3px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #0a1a10;
+  }
+  .image-option:hover { border-color: var(--orange); transform: translateY(-2px); }
+  .image-option.selected { border-color: var(--orange); }
+  .image-option.correct { border-color: var(--success); }
+  .image-option.wrong { border-color: var(--danger); }
+  .image-option img { width: 100%; height: 180px; object-fit: cover; display: block; }
+  .image-option .label { padding: 8px; text-align: center; font-size: 0.85rem; }
+  /* Menu style */
+  .menu-select {
+    width: 100%;
+    padding: 12px;
+    background: #1e4028;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+    margin: 12px 0;
+  }
+  .menu-select:focus { outline: 2px solid var(--orange); }
+  button.primary {
+    background: var(--orange);
+    color: #000;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
+  button.secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button.secondary:hover { border-color: var(--orange); }
+  .hazards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin: 18px 0;
+  }
+  .hazard-card {
+    background: #121a24;
+    border: 2px dashed var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .hazard-card:hover { border-color: var(--warning); }
+  .hazard-card.found { border-style: solid; border-color: var(--success); background: #0d3326; }
+  .hazard-card .badge { position: absolute; top: 8px; right: 8px; background: var(--danger); color: #fff; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; }
+  .drag-container { display: flex; gap: 30px; margin: 20px 0; flex-wrap: wrap; }
+  .actions-pool, .slots {
+    flex: 1; min-width: 280px;
+    background: #121a24;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .actions-pool h3, .slots h3 { font-size: 0.9rem; color: var(--muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+  .draggable {
+    background: #243044;
+    border: 1px solid var(--border);
+    padding: 10px 14px;
+    margin: 6px 0;
+    border-radius: 4px;
+    cursor: grab;
+    user-select: none;
+  }
+  .draggable.dragging { opacity: 0.5; }
+  .slot {
+    min-height: 48px;
+    border: 2px dashed #3a4a60;
+    border-radius: 4px;
+    margin: 6px 0;
+    padding: 8px;
+    background: #0d1218;
+  }
+  .slot.filled { border-style: solid; border-color: var(--success); }
+  .slot .draggable { margin: 0; cursor: default; }
+  .slider-group { margin: 20px 0; }
+  .slider-group label { display: block; margin-bottom: 6px; font-weight: 600; }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+  .slider-value { color: var(--warning); font-weight: bold; }
+  .green-zone { color: var(--success); }
+  .meter {
+    background: #0a0e14;
+    border: 2px solid #3a4a60;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 16px 0;
+    text-align: center;
+  }
+  .dial { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin: 12px 0; }
+  .dial-btn { padding: 8px 14px; background: #243044; border: 1px solid var(--border); border-radius: 4px; cursor: pointer; }
+  .dial-btn.selected { background: var(--accent); color: #000; border-color: var(--accent); }
+  .leads { margin-top: 14px; }
+  .countdown {
+    height: 8px;
+    background: #1a2332;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 12px 0;
+  }
+  .countdown-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--danger), var(--warning));
+    width: 100%;
+    transition: width 0.1s linear;
+  }
+  #feedback {
+    min-height: 48px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-size: 0.95rem;
+    display: none;
+  }
+  #feedback.show { display: block; }
+  #feedback.success { background: #0d3326; border: 1px solid var(--success); color: var(--success); }
+  #feedback.error { background: #3a1a1a; border: 1px solid var(--danger); color: #ffaaaa; }
+  #feedback.info { background: #1a2332; border: 1px solid var(--warning); color: var(--warning); }
+  .nav { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; }
+  button.primary {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
+  button.secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  #report {
+    background: #fff;
+    color: #111;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
+  }
+  #report h2 { color: #c0392b; }
+  #report .log-section { margin: 16px 0; padding: 12px; border: 1px solid #ddd; }
+  .checkbox-list label { display: block; margin: 8px 0; cursor: pointer; }
+  textarea { width: 100%; min-height: 100px; padding: 10px; border-radius: 4px; border: 1px solid var(--border); background: #121a24; color: var(--text); font-family: inherit; margin: 10px 0; }
+  .extinguishers { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0; }
+  .ext-card { flex: 1; min-width: 180px; text-align: center; padding: 16px; background: #121a24; border: 2px solid var(--border); border-radius: 8px; cursor: pointer; }
+  .ext-card.selected { border-color: var(--accent); }
+  .fire-target {
+    margin-top: 16px;
+    padding: 30px;
+    background: radial-gradient(circle, #ff4444 0%, #3a1a1a 70%);
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fire-target.extinguished { background: #0d3326; }
+  footer { text-align: center; margin-top: 30px; color: var(--muted); font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>SUBSTATION SEVEN — INDUSTRIAL INCIDENT</h1>
+    <div class="progress">Scene <span id="scene-num">1</span> of 10 &nbsp;|&nbsp; Score: <span id="score">0</span></div>
+  </header>
+  <p style="text-align:center; color:var(--muted); margin-bottom:12px; font-size:0.95rem;">A simple training story: stop an electrical emergency, keep people safe, and learn the right steps. No special knowledge needed — just common sense and the choices on screen.</p>
+
+  <!-- SCENE 1 -->
+  <div class="scene active" id="scene1">
+    <h2>Scene 1: The Alert & High-Voltage Armor</h2>
+    <div class="situation">
+      An alarm is going off. Something has gone badly wrong on the production line. Electricity is jumping where it shouldn’t inside Switchroom 7. If we don’t stop it, the whole plant could catch fire. Before you go in, you need the right protective clothing — like wearing a full fire suit before walking into a burning building.
+    </div>
+    <div class="problem-video" id="problem-video">
+      <img src="imagine_images/1lGFt.jpg" alt="Control room alarm" class="active">
+      <img src="imagine_images/7ES12.jpg" alt="Arcing fault">
+      <div class="video-caption">LIVE FEED: Phase-to-ground fault detected — Switchroom 7</div>
+    </div>
+    <p>Before stepping out, select your PPE from the locker options (click an image to choose):</p>
+    <div class="image-options">
+      <div class="image-option" data-choice="A">
+        <img src="imagine_images/U7Dgz.jpg" alt="Standard gloves and glasses">
+        <div class="label">A: Standard leather gloves + safety glasses + cotton uniform</div>
+      </div>
+      <div class="image-option" data-choice="B">
+        <img src="imagine_images/J4dsa.jpg" alt="Category 4 Arc Flash Suit">
+        <div class="label">B: Category 4 Arc Flash Suit (40 cal/cm²) + hood + insulating gloves</div>
+      </div>
+      <div class="image-option" data-choice="C">
+        <img src="imagine_images/oodVD.jpg" alt="FR jacket and hardhat">
+        <div class="label">C: Fire-retardant jacket + construction hardhat</div>
+      </div>
+    </div>
+    <div class="standard">Safety Standard: NFPA 70E Chapter 1 / OSHA 1910.335 — PPE matched to calculated incident energy</div>
+  </div>
+
+  <!-- SCENE 2 -->
+  <div class="scene" id="scene2">
+    <h2>Scene 2: Breach Entry & Perimeter Sweep</h2>
+    <div class="situation">
+      You are in the hallway to Switchroom 7. Lights are flickering and you hear a loud electrical hum. Click each picture card to flip it and find the three hidden dangers before you open the door.
+    </div>
+    <div class="flip-container">
+      <div class="flip-card" data-hazard="wet">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="imagine_images/EMCg5.jpg" alt="Wet footing">
+          </div>
+          <div class="flip-card-back">
+            <strong>Wet Footing</strong>
+            <p>Broken overhead pipe dripping water, forming a widening puddle in front of the metal entry door handle.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" data-hazard="blockade">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="imagine_images/ViBIl.jpg" alt="Blocked egress">
+          </div>
+          <div class="flip-card-back">
+            <strong>Emergency Blockade</strong>
+            <p>Abandoned motorized forklift blocking the emergency egress corridor.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" data-hazard="battery">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="imagine_images/76fO0.jpg" alt="Battery station">
+          </div>
+          <div class="flip-card-back">
+            <strong>Secondary Threat</strong>
+            <p>Portable lithium-ion battery charging station overheating with blinking red error light due to grid surge.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p id="hazard-count">Hazards identified: 0 / 3</p>
+    <div class="standard">Goal: Order emergency team to clear corridor and shut off water line before touching the switchroom door.</div>
+  </div>
+
+  <!-- SCENE 3 -->
+  <div class="scene" id="scene3">
+    <h2>Scene 3: Accessing the Hot Zone</h2>
+    <div class="situation">
+      Corridor hazards cleared. You face the heavy steel blast door of Switchroom 7. Crackling is audible inside. Opening incorrectly risks oxygen rush fueling fire or direct blast exposure.
+    </div>
+    <p>Select your tactical approach from the menu:</p>
+    <select class="menu-select" id="door-menu">
+      <option value="">-- Choose approach --</option>
+      <option value="A">A: Stand directly in front, turn handle quickly, and pull wide open</option>
+      <option value="B">B: Stand to the hinge side, body shielded behind concrete wall, crack door open inches first</option>
+      <option value="C">C: Kick the door open from the center to keep hands free</option>
+    </select>
+    <button class="primary" id="confirm-door">Confirm Approach</button>
+    <div class="standard">Safety Standard: OSHA 29 CFR 1910.303 — Safe maintenance entry and blast mitigation</div>
+  </div>
+
+  <!-- SCENE 4 -->
+  <div class="scene" id="scene4">
+    <h2>Scene 4: Defusing the First Core (LOTO)</h2>
+    <div class="situation">
+      Inside, Capacitor Bank 4B is vibrating violently, back-feeding energy and causing sparks near workers outside. Execute Lock-Out/Tag-Out in exact regulatory sequence.
+    </div>
+    <div class="drag-container">
+      <div class="actions-pool">
+        <h3>Available Actions (drag in order)</h3>
+        <div id="action-pool"></div>
+      </div>
+      <div class="slots">
+        <h3>Required Sequence</h3>
+        <div class="slot" data-order="1"><em>1. </em></div>
+        <div class="slot" data-order="2"><em>2. </em></div>
+        <div class="slot" data-order="3"><em>3. </em></div>
+        <div class="slot" data-order="4"><em>4. </em></div>
+      </div>
+    </div>
+    <button class="primary" id="check-loto">Verify LOTO Sequence</button>
+    <div class="standard">Safety Standard: OSHA 29 CFR 1910.147 — Control of Hazardous Energy (Lockout/Tagout)</div>
+  </div>
+
+  <!-- SCENE 5 -->
+  <div class="scene" id="scene5">
+    <h2>Scene 5: Setting the Defense Lines</h2>
+    <div class="situation">
+      One power source is shut off, but the main power bars are still live and dangerous. The covers have bent open, exposing bare metal. You need to tell security how far away ordinary workers must stay so they don’t get hurt.
+    </div>
+    <div class="slider-group">
+      <label>Safe distance for untrained people: <span class="slider-value" id="limited-val">0.0</span> ft</label>
+      <input type="range" id="limited-slider" min="0" max="10" step="0.1" value="0">
+    </div>
+    <div class="slider-group">
+      <label>Distance where full fire-proof clothing is required: <span class="slider-value" id="arc-val">0.0</span> ft</label>
+      <input type="range" id="arc-slider" min="0" max="10" step="0.1" value="0">
+    </div>
+    <button class="primary" id="check-boundaries">Confirm Boundaries</button>
+  </div>
+
+  <!-- SCENE 6 -->
+  <div class="scene" id="scene6">
+    <h2>Scene 6: The Blast Event</h2>
+    <div class="situation">
+      Your partner is safe in the hallway but stunned. A huge electrical explosion just happened. The panel is on fire and smoke is filling the room. You have 15 seconds to choose the safe way to pull your partner clear — like using a wooden stick instead of bare hands near electricity.
+    </div>
+    <img src="imagine_images/GM3wd.jpg" alt="Arc flash event in switchgear" style="max-width:100%; border-radius:8px; margin:12px 0; max-height:280px; object-fit:cover;">
+    <div class="countdown"><div class="countdown-bar" id="countdown-bar"></div></div>
+    <p id="timer-text">Time remaining: 15s</p>
+    <div class="options">
+      <button class="option-btn" data-choice="A">A: Grab technician by jacket and drag straight out</button>
+      <button class="option-btn" data-choice="B">B: Use non-conductive fiberglass rescue hook to snag belt and pull to safe zone (check footing first)</button>
+      <button class="option-btn" data-choice="C">C: Run out for fire hose to extinguish panel before it blocks doorway</button>
+    </div>
+    <div class="standard">Safety Standard: NFPA 70E / OSHA 1910.269 — Emergency rescue for electrical shock victims</div>
+  </div>
+
+  <!-- SCENE 7 -->
+  <div class="scene" id="scene7">
+    <h2>Scene 7: Verification Scan (Zero-Energy Test)</h2>
+    <div class="situation">
+      Partner is safe in corridor. Fire growing. Verify local panel is truly dead (or residual capacitive charge) before shutting main mechanical backup breaker.
+    </div>
+    <div class="meter" style="position:relative; max-width:640px; margin:16px auto;">
+      <img src="imagine_images/M4hWo.jpg" alt="Digital Multimeter" style="width:100%; border-radius:8px; display:block;">
+      <div id="meter-display" style="position:absolute; top:16%; left:30%; width:40%; text-align:center; font-family:'Courier New', monospace; font-size:2.4rem; font-weight:bold; color:#111; background:rgba(255,255,255,0.9); padding:6px 10px; border-radius:4px; letter-spacing:2px;">0.0</div>
+      <input type="range" id="meter-dial" min="0" max="100" step="1" value="0" style="position:absolute; bottom:28%; left:25%; width:50%; accent-color:#ff7a2e;">
+    </div>
+    <p>Turn the dial (slide left or right). Watch the numbers change on the screen, just like a real multimeter. Then place the leads when you think it is set correctly.</p>
+    <div class="leads" style="text-align:center; margin:12px 0;">
+      <button class="action-btn" id="place-leads">Place Test Leads (Phase-to-Phase then Phase-to-Ground)</button>
+    </div>
+    <p id="meter-reading" style="margin-top:12px; font-family:monospace; font-size:1.1rem; text-align:center;"></p>
+    <div class="standard">Safety Standard: OSHA 1910.333(b)(2) — Verify zero-energy state with properly rated instruments</div>
+  </div>
+
+  <!-- SCENE 8 -->
+  <div class="scene" id="scene8">
+    <h2>Scene 8: Fighting the Fire</h2>
+    <div class="situation">
+      Power confirmed dead, but chemical insulation in breaker cabinets is burning fiercely. Toxic black smoke approaching factory ventilation. Extinguish immediately.
+    </div>
+    <img src="imagine_images/z5Q7s.jpg" alt="CO2 Class C extinguisher for electrical fire" style="max-width:100%; border-radius:8px; margin:12px 0; max-height:280px; object-fit:cover;">
+    <div class="extinguishers">
+      <div class="ext-card" data-ext="water">
+        <strong>Water (Class A)</strong>
+        <p>Standard water extinguisher</p>
+      </div>
+      <div class="ext-card" data-ext="co2">
+        <strong>CO₂ / Clean Agent (Class C)</strong>
+        <p>Non-conductive, no residue</p>
+      </div>
+      <div class="ext-card" data-ext="foam">
+        <strong>Pressurized Foam</strong>
+        <p>Highly pressurized foam unit</p>
+      </div>
+    </div>
+    <div class="fire-target" id="fire-target">🔥 CHEMICAL FIRE — DRAG / CLICK EXTINGUISHER HERE</div>
+    <div class="standard">Safety Standard: OSHA 29 CFR 1910.157 — Portable extinguisher selection matching class to hazard</div>
+  </div>
+
+  <!-- SCENE 9 -->
+  <div class="scene" id="scene9">
+    <h2>Scene 9: Emergency Venting</h2>
+    <div class="situation">
+      Fire out, but Switchroom 7 full of toxic gas. Opening exhaust dampers too fast pulls smoke onto factory floor where workers are evacuating. Balance airflow.
+    </div>
+    <div class="slider-group">
+      <label>Exhaust Fan Airflow Rate: <span class="slider-value" id="cfm-val">0</span> CFM</label>
+      <input type="range" id="cfm-slider" min="0" max="100" step="1" value="0">
+      <p>Too low = Smoke Stagnation Zone &nbsp;|&nbsp; Too high = Factory Cross-Contamination &nbsp;|&nbsp; <span class="green-zone">Green Zone: 42–58 CFM</span></p>
+    </div>
+    <button class="primary" id="check-vent">Confirm Ventilation Setting</button>
+    <div class="standard">Safety Standard: OSHA 1910.94 — Industrial ventilation and air containment</div>
+  </div>
+
+  <!-- SCENE 10 -->
+  <div class="scene" id="scene10">
+    <h2>Scene 10: Incident Forensic Log</h2>
+    <div class="situation">
+      Hazard neutralized. Room vented. Assistant receiving care. WHS Inspector needs the official incident file. Document root causes and recommendations.
+    </div>
+    <div class="checkbox-list">
+      <strong>Match field observations to regulatory violations (select all that apply):</strong>
+      <label><input type="checkbox" value="wet"> Wet footing / conductive path near entry (Scene 2)</label>
+      <label><input type="checkbox" value="blockade"> Blocked emergency egress (Scene 2)</label>
+      <label><input type="checkbox" value="battery"> Overheating lithium battery charging station (Scene 2)</label>
+      <label><input type="checkbox" value="blast"> Improper blast door approach risk (Scene 3 / 6)</label>
+      <label><input type="checkbox" value="rescue"> Energized contact risk during rescue (Scene 6)</label>
+    </div>
+    <label for="recommendation"><strong>Formal recommendation to corporate management (prevent future line back-feeding):</strong></label>
+    <textarea id="recommendation" placeholder="Type your formal recommendation here..."></textarea>
+    <button class="primary" id="submit-report">Sign and Submit Report</button>
+  </div>
+
+  <div id="feedback"></div>
+  <div class="nav">
+    <button class="secondary" id="back-btn">← Previous</button>
+    <button class="secondary" id="pause-btn">⏸ Pause</button>
+    <button class="secondary" id="restart-btn">↻ Replay</button>
+    <button class="primary" id="next-btn" disabled>Continue</button>
+  </div>
+
+  <div id="report">
+    <h2>WHS Incident Log — Substation Seven</h2>
+    <div class="log-section" id="report-content"></div>
+    <button class="primary" onclick="window.print()">Print / Save as PDF</button>
+    <button class="secondary" onclick="document.getElementById('report').style.display='none'; document.getElementById('restart-btn').style.display='inline-block';">Close</button>
+  </div>
+</div>
+
+<footer>Training Module — Electrical Safety Standards: NFPA 70E, OSHA 1910.335 / 1910.147 / 1910.303 / 1910.269 / 1910.333 / 1910.157 / 1910.94<br>
+<small>Narration uses the browser’s built-in Web Speech API (text-to-speech). Supporting images are in the imagine_images/ folder. Enable audio and speech for full experience.</small></footer>
+
+<script>
+const state = {
+  scene: 1,
+  score: 0,
+  totalPossible: 10,
+  choices: {},
+  hazardsFound: new Set(),
+  scoredScenes: new Set(),
+  attempts: {},
+  paused: false,
+  lotoCorrect: false,
+  boundariesCorrect: false,
+  meterCorrect: false,
+  extinguisherCorrect: false,
+  ventCorrect: false,
+  timer: null,
+  timeLeft: 15,
+  meterMode: null
+};
+
+const scenes = document.querySelectorAll('.scene');
+const sceneNumEl = document.getElementById('scene-num');
+const scoreEl = document.getElementById('score');
+const feedbackEl = document.getElementById('feedback');
+const nextBtn = document.getElementById('next-btn');
+const restartBtn = document.getElementById('restart-btn');
+
+// Simple procedural audio via Web Audio API (no external files needed)
+let audioCtx = null;
+function getAudioCtx() {
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  return audioCtx;
+}
+function playTone(freq = 440, duration = 0.2, type = 'sine', volume = 0.15) {
+  try {
+    const ctx = getAudioCtx();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = type;
+    osc.frequency.setValueAtTime(freq, ctx.currentTime);
+    gain.gain.setValueAtTime(volume, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    osc.stop(ctx.currentTime + duration);
+  } catch (e) { /* ignore if audio blocked */ }
+}
+function playAlarm() {
+  playTone(800, 0.15, 'square', 0.1);
+  setTimeout(() => playTone(600, 0.15, 'square', 0.1), 180);
+  setTimeout(() => playTone(800, 0.2, 'square', 0.1), 360);
+}
+function playHum() {
+  playTone(60, 1.2, 'sawtooth', 0.08);
+}
+function playArcFlash() {
+  playTone(80, 0.6, 'sawtooth', 0.2);
+  setTimeout(() => playTone(120, 0.4, 'square', 0.15), 100);
+}
+
+// Narration using Web Speech API for every scene
+const sceneNarrations = {
+  1: "An alarm is sounding. Electricity is jumping where it should not be in Switchroom 7. If we do not stop it, the whole factory could catch fire. Before you go in, choose the right protective clothing. Think of it like putting on a full fire suit before walking into a burning building.",
+  2: "You are in the hallway leading to Switchroom 7. The lights are flickering and you can hear a loud electrical hum. Look carefully and click the three hidden dangers before you open the door.",
+  3: "The hallway is clear. Now you are facing a heavy steel door. You can hear crackling inside. Choose the safest way to open the door so you do not get hit by a blast.",
+  4: "Inside the room, one of the power units is shaking hard and sending electricity back toward the workers. Put the safety steps in the exact correct order to lock it out.",
+  5: "One power source is off, but the main power bars are still live and dangerous. The covers are bent open. Set how far ordinary workers must stay away.",
+  6: "Your partner is safe in the hallway but stunned. A huge electrical explosion has just happened. The panel is on fire and smoke is filling the room. You have fifteen seconds to choose the safe way to pull your partner clear.",
+  7: "Your partner is safe. The fire is growing. You must check that the power is truly off using a multimeter before you touch the big breaker. Turning the dial should change the numbers on the screen, just like a real meter.",
+  8: "The power is confirmed off, but the insulation inside the cabinets is still burning and making thick black smoke. Choose the right type of extinguisher that will not conduct electricity.",
+  9: "The fire is out, but the room is full of poisonous gas. Adjust the fan speed so the smoke leaves through the roof without being pulled onto the factory floor where people are leaving.",
+  10: "Everything is under control. Now fill in the official incident report. Check the problems you saw and write your recommendation so this does not happen again."
+};
+
+function speakScene(n, onFinished) {
+  if (!window.speechSynthesis) {
+    if (onFinished) onFinished();
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const text = sceneNarrations[n] || "";
+  if (!text) {
+    if (onFinished) onFinished();
+    return;
+  }
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.rate = 0.95;
+  utter.pitch = 1.0;
+  utter.volume = 0.9;
+  utter.onend = () => { if (onFinished) onFinished(); };
+  utter.onerror = () => { if (onFinished) onFinished(); };
+  window.speechSynthesis.speak(utter);
+}
+
+function showScene(n) {
+  scenes.forEach(s => s.classList.remove('active'));
+  const target = document.getElementById('scene' + n);
+  if (target) target.classList.add('active');
+  state.scene = n;
+  sceneNumEl.textContent = n;
+  feedbackEl.className = '';
+  feedbackEl.innerHTML = '';
+  nextBtn.disabled = true;
+  nextBtn.style.display = n < 10 ? 'inline-block' : 'none';
+  document.getElementById('back-btn').style.display = n > 1 ? 'inline-block' : 'none';
+
+  // Reset attempts for this scene on entry (so refresh/re-entry allows scoring again)
+  state.attempts[n] = 0;
+  state.paused = false;
+  updatePauseButton();
+
+  // Stop slideshow if leaving scene 1
+  if (slideshowInterval && n !== 1) {
+    clearInterval(slideshowInterval);
+    slideshowInterval = null;
+  }
+
+  // Speak narration for every scene; special handling for scene 6 timer
+  if (n === 6) {
+    playArcFlash();
+    speakScene(n, () => {
+      startTimer();
+    });
+  } else {
+    speakScene(n);
+  }
+
+  if (n === 1) {
+    playAlarm();
+    startProblemVideo();
+  }
+  if (n === 2 || n === 3) playHum();
+  if (n === 4) {
+    state.lotoAttempts = 0;
+    initLOTO();
+  }
+  if (n === 7) resetMeter();
+  if (n === 10) nextBtn.style.display = 'none';
+}
+
+function showFeedback(msg, type = 'info') {
+  feedbackEl.innerHTML = msg;
+  feedbackEl.className = 'show ' + type;
+}
+
+function addScore(points = 1) {
+  if (state.scoredScenes.has(state.scene)) return;
+  state.score += points;
+  state.scoredScenes.add(state.scene);
+  scoreEl.textContent = state.score;
+}
+
+// SCENE 1 — Image options + problem slideshow
+let slideshowInterval = null;
+function startProblemVideo() {
+  const imgs = document.querySelectorAll('#problem-video img');
+  if (imgs.length < 2) return;
+  let idx = 0;
+  imgs.forEach(img => img.classList.remove('active'));
+  imgs[0].classList.add('active');
+  if (slideshowInterval) clearInterval(slideshowInterval);
+  slideshowInterval = setInterval(() => {
+    imgs[idx].classList.remove('active');
+    idx = (idx + 1) % imgs.length;
+    imgs[idx].classList.add('active');
+  }, 2500);
+}
+document.querySelectorAll('#scene1 .image-option').forEach(card => {
+  card.addEventListener('click', () => {
+    const choice = card.dataset.choice;
+    state.choices.ppe = choice;
+    document.querySelectorAll('#scene1 .image-option').forEach(c => c.classList.remove('correct','wrong','selected'));
+    card.classList.add('selected');
+    if (choice === 'B') {
+      card.classList.add('correct');
+      showFeedback('✅ Correct Path. Category 4 Arc Flash Suit is essential protective armor for an unverified active fault zone.', 'success');
+      addScore();
+      playTone(880, 0.25, 'sine');
+      nextBtn.disabled = false;
+    } else if (choice === 'A') {
+      card.classList.add('wrong');
+      showFeedback('❌ Vulnerable. Standard leather gloves and cotton provide zero protection against arc flash. Select Category 4.', 'error');
+    } else {
+      card.classList.add('wrong');
+      showFeedback('❌ Insufficient. FR jacket and hardhat will melt or fail under arc-flash blast pressures. Select Category 4.', 'error');
+    }
+  });
+});
+
+// SCENE 2 — Flip cards
+document.querySelectorAll('.flip-card').forEach(card => {
+  card.addEventListener('click', () => {
+    if (card.classList.contains('flipped')) return;
+    card.classList.add('flipped');
+    state.hazardsFound.add(card.dataset.hazard);
+    document.getElementById('hazard-count').textContent = `Hazards identified: ${state.hazardsFound.size} / 3`;
+    if (state.hazardsFound.size === 3) {
+      showFeedback('✅ All three hazards identified. Emergency team ordered to clear corridor and shut off water line. Safe to approach blast door.', 'success');
+      addScore();
+      nextBtn.disabled = false;
+    }
+  });
+});
+
+// SCENE 3 — Menu
+document.getElementById('confirm-door').addEventListener('click', () => {
+  const choice = document.getElementById('door-menu').value;
+  if (!choice) {
+    showFeedback('Please select an approach from the menu.', 'error');
+    return;
+  }
+  state.choices.door = choice;
+  if (choice === 'B') {
+    showFeedback('✅ Correct Path. Using the hinge side and concrete wall as a shield mitigates blast pressure.', 'success');
+    addScore();
+    playTone(880, 0.25, 'sine');
+    nextBtn.disabled = false;
+  } else if (choice === 'A') {
+    showFeedback('❌ Dangerous. Standing in front puts chest and face directly in the blast path.', 'error');
+  } else {
+    showFeedback('❌ High Risk. Kicking creates unstable footing in a hazard zone.', 'error');
+  }
+});
+
+// SCENE 4 — LOTO Drag & Drop
+const correctOrder = [
+  'Pull the primary control circuit break to stop the logic loop.',
+  'Crank the heavy mechanical rotary isolation handle down to the absolute "DISCONNECT" position.',
+  'Snap your personal red steel lock onto the locking hasp and pocket the key.',
+  'Hang the warning tag: "DANGER: DO NOT OPERATE – LINE ISOLATION IN PROGRESS."'
+];
+
+function initLOTO() {
+  const pool = document.getElementById('action-pool');
+  pool.innerHTML = '';
+  document.getElementById('check-loto').disabled = false;
+  const shuffled = [...correctOrder].sort(() => Math.random() - 0.5);
+  shuffled.forEach(text => {
+    const el = document.createElement('div');
+    el.className = 'draggable';
+    el.draggable = true;
+    el.textContent = text;
+    el.addEventListener('dragstart', e => {
+      e.dataTransfer.setData('text/plain', text);
+      el.classList.add('dragging');
+    });
+    el.addEventListener('dragend', () => el.classList.remove('dragging'));
+    pool.appendChild(el);
+  });
+  document.querySelectorAll('.slot').forEach(slot => {
+    slot.innerHTML = '<em>' + slot.dataset.order + '. </em>';
+    slot.classList.remove('filled');
+    slot.addEventListener('dragover', e => e.preventDefault());
+    slot.addEventListener('drop', e => {
+      e.preventDefault();
+      const text = e.dataTransfer.getData('text/plain');
+      if (slot.querySelector('.draggable')) return;
+      const dragged = [...document.querySelectorAll('.draggable')].find(d => d.textContent === text && d.parentElement.id === 'action-pool');
+      if (dragged) {
+        slot.appendChild(dragged);
+        slot.classList.add('filled');
+        dragged.draggable = false;
+      }
+    });
+  });
+}
+
+function autoFillLOTO() {
+  const pool = document.getElementById('action-pool');
+  pool.innerHTML = '';
+  document.querySelectorAll('.slot').forEach((slot, i) => {
+    slot.innerHTML = '<em>' + slot.dataset.order + '. </em>';
+    const el = document.createElement('div');
+    el.className = 'draggable';
+    el.draggable = false;
+    el.textContent = correctOrder[i];
+    el.style.transition = 'all 0.4s ease';
+    el.style.transform = 'scale(0.95)';
+    slot.appendChild(el);
+    slot.classList.add('filled');
+    setTimeout(() => { el.style.transform = 'scale(1)'; }, 50);
+  });
+  // Disable further interaction
+  document.getElementById('check-loto').disabled = true;
+}
+
+document.getElementById('check-loto').addEventListener('click', () => {
+  if (state.lotoCorrect) return;
+  const slots = document.querySelectorAll('.slot');
+  let correct = true;
+  slots.forEach((slot, i) => {
+    const item = slot.querySelector('.draggable');
+    if (!item || item.textContent !== correctOrder[i]) correct = false;
+  });
+  if (correct) {
+    showFeedback('✅ Perfect LOTO sequence. Capacitor Bank 4B is isolated. Energy source controlled per OSHA 1910.147.', 'success');
+    state.lotoCorrect = true;
+    addScore();
+    nextBtn.disabled = false;
+    playTone(880, 0.2, 'sine'); // success tone
+  } else {
+    state.lotoAttempts++;
+    if (state.lotoAttempts >= 3) {
+      autoFillLOTO();
+      showFeedback('⚠️ After 3 incorrect attempts, the correct LOTO sequence has been revealed. Study the order carefully before continuing.', 'info');
+      nextBtn.disabled = false;
+      playTone(220, 0.4, 'square'); // reveal tone
+    } else {
+      showFeedback(`❌ Incorrect sequence. Attempt ${state.lotoAttempts} of 3. Review the regulatory order and try again.`, 'error');
+      playTone(150, 0.3, 'sawtooth'); // error tone
+      setTimeout(() => { if (!state.lotoCorrect && state.lotoAttempts < 3) initLOTO(); }, 1500);
+    }
+  }
+});
+
+// SCENE 5
+['limited-slider','arc-slider'].forEach(id => {
+  document.getElementById(id).addEventListener('input', e => {
+    const val = parseFloat(e.target.value).toFixed(1);
+    document.getElementById(id.replace('-slider','-val')).textContent = val;
+  });
+});
+document.getElementById('check-boundaries').addEventListener('click', () => {
+  const limited = parseFloat(document.getElementById('limited-slider').value);
+  const arc = parseFloat(document.getElementById('arc-slider').value);
+  if (Math.abs(limited - 3.5) < 0.15 && Math.abs(arc - 4.0) < 0.15) {
+    showFeedback('✅ Correct. Ordinary people stay at least 3.5 feet away. Anyone closer needs full fire-proof clothing (4 feet).', 'success');
+    state.boundariesCorrect = true;
+    addScore();
+    playTone(880, 0.25, 'sine');
+    nextBtn.disabled = false;
+  } else {
+    state.attempts[5] = (state.attempts[5] || 0) + 1;
+    playTone(150, 0.3, 'sawtooth');
+    if (state.attempts[5] >= 3) {
+      document.getElementById('limited-slider').value = 3.5;
+      document.getElementById('arc-slider').value = 4.0;
+      document.getElementById('limited-val').textContent = '3.5';
+      document.getElementById('arc-val').textContent = '4.0';
+      showFeedback('⚠️ After 3 tries, the correct distances are shown: 3.5 ft for ordinary people and 4.0 ft for full protection.', 'info');
+      nextBtn.disabled = false;
+    } else {
+      showFeedback(`❌ Not quite. Try again. Attempt ${state.attempts[5]} of 3.`, 'error');
+    }
+  }
+});
+
+// SCENE 6 — Timed
+function startTimer() {
+  state.timeLeft = 15;
+  const bar = document.getElementById('countdown-bar');
+  const text = document.getElementById('timer-text');
+  bar.style.width = '100%';
+  if (state.timer) clearInterval(state.timer);
+  state.timer = setInterval(() => {
+    state.timeLeft -= 0.1;
+    const pct = Math.max(0, (state.timeLeft / 15) * 100);
+    bar.style.width = pct + '%';
+    text.textContent = `Time remaining: ${Math.max(0, state.timeLeft).toFixed(1)}s`;
+    if (state.timeLeft <= 0) {
+      clearInterval(state.timer);
+      showFeedback('❌ Time expired. Delayed action in an arc flash event increases dual-casualty risk. Correct action is the non-conductive rescue hook.', 'error');
+      nextBtn.disabled = false; // allow continue after failure
+    }
+  }, 100);
+}
+document.querySelectorAll('#scene6 .option-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (state.timeLeft <= 0) return;
+    clearInterval(state.timer);
+    const choice = btn.dataset.choice;
+    state.choices.rescue = choice;
+    document.querySelectorAll('#scene6 .option-btn').forEach(b => b.classList.remove('correct','wrong'));
+    if (choice === 'B') {
+      btn.classList.add('correct');
+      showFeedback('✅ Correct. Using a non-conductive hook is like using a wooden stick to pull someone away from live wires. Safe.', 'success');
+      addScore();
+      playTone(880, 0.25, 'sine');
+    } else if (choice === 'A') {
+      btn.classList.add('wrong');
+      showFeedback('❌ Dangerous. Touching them directly could make you part of the electrical path. Use the non-conductive hook.', 'error');
+      playTone(150, 0.3, 'sawtooth');
+    } else {
+      btn.classList.add('wrong');
+      showFeedback('❌ Very dangerous. Water and electricity do not mix. Do not use a hose here.', 'error');
+      playTone(150, 0.3, 'sawtooth');
+    }
+    nextBtn.disabled = false;
+  });
+});
+
+// SCENE 7 — Realistic multimeter
+function getMeterReading(dialVal) {
+  // Simulate different ranges. Correct AC voltage zone is roughly 70-85 on the 0-100 dial
+  if (dialVal < 15) return 'OFF';
+  if (dialVal < 35) return (Math.random() * 0.5).toFixed(1) + ' V DC';
+  if (dialVal < 55) return 'OL'; // open loop / ohms
+  if (dialVal < 70) return (Math.random() * 2).toFixed(1) + ' mV';
+  if (dialVal >= 70 && dialVal <= 85) return '0.0 V AC';
+  return (Math.random() * 12).toFixed(1) + ' V';
+}
+function resetMeter() {
+  state.meterAttempts = 0;
+  const dial = document.getElementById('meter-dial');
+  if (dial) dial.value = 0;
+  const display = document.getElementById('meter-display');
+  if (display) display.textContent = '0.0';
+  document.getElementById('meter-reading').textContent = '';
+}
+document.getElementById('meter-dial').addEventListener('input', (e) => {
+  const val = parseInt(e.target.value, 10);
+  document.getElementById('meter-display').textContent = getMeterReading(val);
+});
+document.getElementById('place-leads').addEventListener('click', () => {
+  const dialVal = parseInt(document.getElementById('meter-dial').value, 10);
+  const reading = getMeterReading(dialVal);
+  if (dialVal >= 70 && dialVal <= 85) {
+    document.getElementById('meter-display').textContent = '0.0 V AC';
+    document.getElementById('meter-reading').textContent = 'Reading: 0.0 V AC phase-to-phase and phase-to-ground. Power is truly off.';
+    showFeedback('✅ Correct. The meter shows zero on AC voltage. It is safe to operate the backup breaker.', 'success');
+    state.meterCorrect = true;
+    addScore();
+    playTone(880, 0.25, 'sine');
+    nextBtn.disabled = false;
+  } else {
+    state.attempts[7] = (state.attempts[7] || 0) + 1;
+    playTone(150, 0.3, 'sawtooth');
+    if (state.attempts[7] >= 3) {
+      document.getElementById('meter-dial').value = 78;
+      document.getElementById('meter-display').textContent = '0.0 V AC';
+      document.getElementById('meter-reading').textContent = 'Correct setting shown: AC Voltage, reading 0.0 V. Power is off.';
+      showFeedback('⚠️ After 3 incorrect tries, the correct AC voltage setting is shown. The screen reads 0.0 V.', 'info');
+      nextBtn.disabled = false;
+    } else {
+      document.getElementById('meter-display').textContent = 'ERR';
+      document.getElementById('meter-reading').textContent = 'Wrong range — meter is not happy.';
+      showFeedback(`❌ Wrong setting. The numbers look wrong. Attempt ${state.attempts[7]} of 3. Turn the dial more.`, 'error');
+      setTimeout(() => {
+        document.getElementById('meter-display').textContent = getMeterReading(dialVal);
+      }, 900);
+    }
+  }
+});
+
+// SCENE 8
+let selectedExt = null;
+document.querySelectorAll('.ext-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.ext-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    selectedExt = card.dataset.ext;
+  });
+});
+document.getElementById('fire-target').addEventListener('click', () => {
+  if (!selectedExt) {
+    showFeedback('Select an extinguisher first.', 'error');
+    return;
+  }
+  const target = document.getElementById('fire-target');
+  if (selectedExt === 'co2') {
+    target.classList.add('extinguished');
+    target.innerHTML = '✅ FIRE EXTINGUISHED — Non-conductive Class C agent used';
+    showFeedback('✅ Correct Path. CO₂ / Clean Agent is non-conductive, leaves no residue, and smothers electrical fires safely.', 'success');
+    state.extinguisherCorrect = true;
+    addScore();
+    nextBtn.disabled = false;
+  } else if (selectedExt === 'water') {
+    showFeedback('❌ Catastrophic. Water is conductive. Even with power off, residual or adjacent live parts turn this into a lethal stream.', 'error');
+  } else {
+    showFeedback('❌ Failure. Foam introduces conductive liquid risk in an electrical environment.', 'error');
+  }
+});
+
+// SCENE 9
+document.getElementById('cfm-slider').addEventListener('input', e => {
+  document.getElementById('cfm-val').textContent = e.target.value;
+});
+document.getElementById('check-vent').addEventListener('click', () => {
+  const cfm = parseInt(document.getElementById('cfm-slider').value, 10);
+  if (cfm >= 42 && cfm <= 58) {
+    showFeedback('✅ Optimal balance. Airflow in green zone vents toxic gas safely through roof chimney without cross-contaminating the factory floor.', 'success');
+    state.ventCorrect = true;
+    addScore();
+    nextBtn.disabled = false;
+  } else if (cfm < 42) {
+    showFeedback('❌ Too low — Smoke Stagnation Zone. Toxic gas remains trapped.', 'error');
+  } else {
+    showFeedback('❌ Too high — Factory Cross-Contamination Zone. Negative pressure pulls smoke onto the evacuation floor.', 'error');
+  }
+});
+
+// SCENE 10
+document.getElementById('submit-report').addEventListener('click', () => {
+  const checks = [...document.querySelectorAll('#scene10 input[type=checkbox]:checked')].map(c => c.value);
+  const rec = document.getElementById('recommendation').value.trim();
+  if (checks.length < 2 || rec.length < 20) {
+    showFeedback('Please select at least two violations and write a substantive recommendation (20+ characters).', 'error');
+    return;
+  }
+  state.choices.report = { checks, rec };
+  addScore(); // final point for completion
+  generateReport(checks, rec);
+  nextBtn.style.display = 'none';
+  restartBtn.style.display = 'inline-block';
+});
+
+function generateReport(checks, rec) {
+  const correctMap = {
+    wet: 'Wet footing creating conductive path near entry door',
+    blockade: 'Blocked emergency egress corridor',
+    battery: 'Overheating lithium-ion charging station from grid surge',
+    blast: 'Potential blast path exposure during door entry',
+    rescue: 'Risk of dual casualty via conductive contact during rescue'
+  };
+  const found = checks.map(c => correctMap[c] || c).join('<br>• ');
+  const content = `
+    <p><strong>Incident:</strong> Phase-to-ground fault, Switchroom 7 — Substation Seven</p>
+    <p><strong>Date/Time:</strong> ${new Date().toLocaleString()}</p>
+    <p><strong>Operator Score:</strong> ${state.score} / ${state.totalPossible}</p>
+    <hr>
+    <p><strong>Key Decisions:</strong></p>
+    <ul>
+      <li>PPE: ${state.choices.ppe === 'B' ? 'Correct (Cat 4 Arc Flash Suit)' : 'Incorrect'}</li>
+      <li>Door Protocol: ${state.choices.door === 'B' ? 'Correct (hinge-side shield)' : 'Incorrect'}</li>
+      <li>LOTO Sequence: ${state.lotoCorrect ? 'Correct' : 'Incorrect'}</li>
+      <li>Boundaries: ${state.boundariesCorrect ? 'Correct (3.5 / 4.0 ft)' : 'Incorrect'}</li>
+      <li>Rescue: ${state.choices.rescue === 'B' ? 'Correct (non-conductive hook)' : 'Incorrect'}</li>
+      <li>Meter Verification: ${state.meterCorrect ? 'Correct (AC Voltage)' : 'Incorrect'}</li>
+      <li>Extinguisher: ${state.extinguisherCorrect ? 'Correct (Class C CO₂)' : 'Incorrect'}</li>
+      <li>Ventilation: ${state.ventCorrect ? 'Correct (green zone)' : 'Incorrect'}</li>
+    </ul>
+    <p><strong>Documented Violations / Observations:</strong><br>• ${found}</p>
+    <p><strong>Recommendation to Management:</strong><br>${rec.replace(/\n/g, '<br>')}</p>
+    <p><em>Signed and submitted as part of official WHS Incident File.</em></p>
+  `;
+  document.getElementById('report-content').innerHTML = content;
+  document.getElementById('report').style.display = 'block';
+  document.getElementById('report').scrollIntoView({ behavior: 'smooth' });
+  showFeedback('✅ Report signed and generated. Review the printable WHS Incident Log below.', 'success');
+}
+
+function updatePauseButton() {
+  const btn = document.getElementById('pause-btn');
+  if (btn) btn.textContent = state.paused ? '▶ Resume' : '⏸ Pause';
+}
+function togglePause() {
+  state.paused = !state.paused;
+  updatePauseButton();
+  if (state.paused) {
+    window.speechSynthesis && window.speechSynthesis.pause();
+    if (state.timer) clearInterval(state.timer);
+  } else {
+    window.speechSynthesis && window.speechSynthesis.resume();
+    if (state.scene === 6 && state.timeLeft > 0) startTimer();
+  }
+}
+document.getElementById('pause-btn').addEventListener('click', togglePause);
+
+// Navigation
+nextBtn.addEventListener('click', () => {
+  if (state.scene < 10) showScene(state.scene + 1);
+});
+document.getElementById('back-btn').addEventListener('click', () => {
+  location.reload();
+});
+document.getElementById('restart-btn').addEventListener('click', () => location.reload());
+
+// Init
+showScene(1);
+</script>
+</body>
+</html>

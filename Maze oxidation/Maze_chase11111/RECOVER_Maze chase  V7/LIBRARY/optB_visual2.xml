@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="optB_visual2" itemID="69d60f3f-0000002e" lastModified="1775636658">
+  <timeline>
+    <DOMTimeline name="optB_visual2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-1687 -851|1711 -851!1711 -851|1711 829!1711 829|-1687 829!-1687 829|-1687 -851"/>
+                    <Edge cubics="!-1687 829(;-1687,829 -1687,-851 -1687,-851q-1687 829 -1687 -851);"/>
+                    <Edge cubics="!1711 -851(;1711,-851 1711,829 1711,829q1711 -851 1711 829);"/>
+                    <Edge cubics="!-1687 -851(;-1687,-851 1711,-851 1711,-851q-1687 -851 1711 -851);"/>
+                    <Edge cubics="!1711 829(;1711,829 -1687,829 -1687,829q1711 829 -1687 829);"/>
+                  </edges>
+                </DOMShape>
+                <DOMBitmapInstance libraryItemName="cDVif-removebg-preview.png">
+                  <matrix>
+                    <Matrix a="0.266464233398438" d="0.266464233398438" tx="-88" ty="-89"/>
+                  </matrix>
+                </DOMBitmapInstance>
+                <DOMDynamicText fontRenderingMode="standard" width="66.45" height="59.2" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="11.05" ty="-28.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Animal cell</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="21.9" size="18" bitmapSize="360" face="Verdana" fillColor="#0000FF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

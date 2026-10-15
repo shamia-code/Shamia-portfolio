@@ -1,0 +1,135 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Answer B" itemID="69d4e614-0000026f" symbolType="button" lastModified="1779435906">
+  <persistentData>
+    <PD n="CreateJSToolkit_timelinedata" v="version&#xA;0.1&#xA;loop&#xA;false"/>
+  </persistentData>
+  <timeline>
+    <DOMTimeline name="Answer B">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#5F5F5F" alpha="0.23921568627451"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!9189 -1486|9189 -1437!9189 -1437|5848 -1437!5848 -1437|5848 -3217!5848 -3217|9189 -3217!9189 -3217|9189 -3118!9189 -3118|9187 -3118!9187 -3118|9187 -1486!9187 -1486|9189 -1486"/>
+                    <Edge strokeStyle="1" edges="!-4028 -3020.5|-4029 -3118!-4029 -3118|-4027 -3118!-4027 -3118|-4028 -3020.5!-3709 -3063|-590 -3063!-590 -3063|-590 -1461!-590 -1461|-3709 -1461!-3709 -1461|-3709 -3063!-4029 -1486|-4028 -3020.5"/>
+                    <Edge cubics="!-4029 -3118(;-4029,-3118 -4027,-3118 -4027,-3118q-4029 -3118 -4027 -3118);"/>
+                    <Edge cubics="!-4028 -3020(;-4028,-3020 -4027,-3118 -4027,-3118q-4028 -3020 -4027 -3118);"/>
+                    <Edge cubics="!-4028 -3020(;-4028,-3020 -4029,-3118 -4029,-3118q-4028 -3020 -4029 -3118);"/>
+                    <Edge cubics="!-4029 -1486(;-4029,-1486 -4028,-3020 -4028,-3020q-4029 -1486 -4028 -3020);"/>
+                    <Edge cubics="!5848 -1437(;5848,-1437 5848,-3217 5848,-3217q5848 -1437 5848 -3217);"/>
+                    <Edge cubics="!9189 -1437(;9189,-1437 5848,-1437 5848,-1437q9189 -1437 5848 -1437);"/>
+                    <Edge cubics="!9189 -3217(;9189,-3217 9189,-3118 9189,-3118q9189 -3217 9189 -3118);"/>
+                    <Edge cubics="!9189 -1486(;9189,-1486 9189,-1437 9189,-1437q9189 -1486 9189 -1437);"/>
+                    <Edge cubics="!5848 -3217(;5848,-3217 9189,-3217 9189,-3217q5848 -3217 9189 -3217);"/>
+                    <Edge cubics="!9187 -3118(;9187,-3118 9189,-3118 9189,-3118q9187 -3118 9189 -3118);"/>
+                    <Edge cubics="!9189 -1486(;9189,-1486 9187,-1486 9187,-1486q9189 -1486 9187 -1486);"/>
+                    <Edge cubics="!9187 -1486(;9187,-1486 9187,-3118 9187,-3118q9187 -1486 9187 -3118);"/>
+                    <Edge cubics="!-3709 -1461(;-3709,-1461 -3709,-3063 -3709,-3063q-3709 -1461 -3709 -3063);"/>
+                    <Edge cubics="!-590 -3063(;-590,-3063 -590,-1461 -590,-1461q-590 -3063 -590 -1461);"/>
+                    <Edge cubics="!-590 -1461(;-590,-1461 -3709,-1461 -3709,-1461q-590 -1461 -3709 -1461);"/>
+                    <Edge cubics="!-3709 -3063(;-3709,-3063 -590,-3063 -590,-3063q-3709 -3063 -590 -3063);"/>
+                  </edges>
+                </DOMShape>
+                <DOMSymbolInstance libraryItemName="optB_visual" name="optB_visual0">
+                  <matrix>
+                    <Matrix tx="-217.05" ty="217.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-192.9" y="-2.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optB_visual2" name="optB_visual2">
+                  <matrix>
+                    <Matrix a="0.973785400390625" tx="-284.75" ty="-114.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optB_visual3" name="optB_visual3">
+                  <matrix>
+                    <Matrix a="1.21250915527344" d="1.1324462890625" tx="-411.05" ty="217.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.1" y="-0.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optB_visual4" name="optB_visual4">
+                  <matrix>
+                    <Matrix a="1.088134765625" d="1.03880310058594" tx="-102.55" ty="74.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.15" y="-0.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optB_visual5" name="optB_visual5">
+                  <matrix>
+                    <Matrix a="0.9837646484375" d="1.06005859375" tx="-591.1" ty="29.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optB_visual6" name="optB_visual6">
+                  <matrix>
+                    <Matrix a="0.999969482421875" d="1.104248046875" tx="-591.9" ty="28.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.75" y="-0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optB_visual7" name="optB_visual7">
+                  <matrix>
+                    <Matrix a="1.064453125" d="1.05517578125" tx="-101.45" ty="75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="0.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optB_visual8" name="optB_visual8">
+                  <matrix>
+                    <Matrix a="1.00973510742188" d="0.9891357421875" tx="-409.95" ty="216.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="0.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optB_visual9" name="optB_visual9">
+                  <matrix>
+                    <Matrix a="1.0245361328125" d="1.0494384765625" tx="-284.4" ty="-117.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05" y="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="optB_visual10" name="optB_visual10">
+                  <matrix>
+                    <Matrix a="1.07757568359375" d="1.09861755371094" tx="-592.3" ty="29"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

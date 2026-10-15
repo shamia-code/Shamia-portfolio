@@ -1,0 +1,68 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="introContainer" itemID="69d4bbc9-0000006c" lastModified="1779801488">
+  <persistentData>
+    <PD n="CreateJSToolkit_timelinedata" v="version&#xA;0.1&#xA;loop&#xA;false"/>
+  </persistentData>
+  <timeline>
+    <DOMTimeline name="introContainer" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-10020 7256|10020 7256!10020 7256|10020 19616!10020 19616|-10020 19616!-10020 19616|-10020 7256"/>
+                  </edges>
+                </DOMShape>
+                <DOMBitmapInstance libraryItemName="ChatGPT Image May 23, 2026, 12_34_46 PM.png">
+                  <matrix>
+                    <Matrix a="1.31561279296875" d="0.59161376953125" tx="-481" ty="374"/>
+                  </matrix>
+                </DOMBitmapInstance>
+                <DOMDynamicText name="titleText" fontRenderingMode="standard" top="61.5" left="-82.5" width="850" height="365.5" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="-338.35" ty="330.3"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>&#xD;Welcome to the Atoms, Elements, and Compounds - Maze Chase ! &#xD;</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="50.15" size="40" bitmapSize="800" face="Orbitron-Regular"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="narrationText" fontRenderingMode="standard" top="61.5" left="61.95" width="576.3" height="226.75" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="-338.35" ty="484.5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Guide your Avatar through the maze by answering questions about the building blocks of matter.</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="63" size="37" bitmapSize="740" face="Oswald-Light" fillColor="#993333"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMSymbolInstance libraryItemName="startbutton" name="startBtn" symbolType="button">
+                  <matrix>
+                    <Matrix tx="-4.25" ty="767.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

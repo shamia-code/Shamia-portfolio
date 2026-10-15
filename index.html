@@ -2,377 +2,281 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shamia Namagembe — Instructional Design & eLearning Develope</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shamia Namagembe | Instructional Designer & eLearning Developer</title>
+<meta name="description" content="Instructional designer and eLearning developer in Kampala, Uganda. Interactive, gamified and scenario-based learning built in Articulate Storyline 360.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#10203A;
-    --chalk:#F0EFEA;
-    --gold:#D3A13B;
-    --rule:#C7CCC4;
-    --text:#1E2430;
-    --text-soft:#4A5163;
-  }
+:root{--ink:#1E1B4B;--paper:#FFFBF5;--line:#E6E0F5;--teal:#0D9488;--amber:#FBBF24;--coral:#F97316;--violet:#7C3AED;--sky:#0284C7;--txt:#27243F;--soft:#58546F;
+--brand:#4338CA;
+--serif:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--sans:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:112.5%}
+body{margin:0;background:var(--paper);color:var(--txt);font:1rem/1.65 var(--sans)}
+h1,h2,h3{font-family:var(--serif);color:var(--ink);margin:0;font-weight:600}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.shell{display:grid;grid-template-columns:270px 1fr}
+.rail{position:sticky;top:0;height:100vh;background:var(--brand);color:#EEF2FF;padding:28px 22px;display:flex;flex-direction:column}
+.rail .who{font-family:var(--serif);font-size:1.2rem;color:#fff;text-decoration:none;line-height:1.25}
+.rail small{display:block;font:.8rem var(--sans);color:#C7D2FE;margin-top:4px}
+.rail ol{list-style:none;margin:36px 0 0;padding:0;border-left:2px solid rgba(255,255,255,.25)}
+.rail li a{display:block;padding:8px 0 8px 16px;margin-left:-2px;border-left:2px solid transparent;color:#E0E7FF;text-decoration:none;font-size:.95rem}
+.rail li a:hover{color:#fff}
+.rail li a.on{color:#fff;border-left-color:var(--amber)}
+.meter{margin-top:auto;font-size:.8rem;color:#C7D2FE}
+.bar{height:6px;background:rgba(255,255,255,.25);border-radius:3px;margin-top:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--amber)}
+h2{border-left:6px solid var(--coral);padding-left:14px}.contact h2,.promise h2{border-color:var(--amber)}
+main{min-width:0}
+.in{max-width:1400px;padding:0 56px;margin:0 auto}
+section{padding:80px 0;border-bottom:1px solid var(--line)}
+h2{font-size:2.1rem;margin-bottom:10px}
+.lede{color:var(--soft);max-width:90ch;margin:0 0 32px}
+.btn{display:inline-block;padding:12px 22px;border-radius:4px;text-decoration:none;font-weight:600;font-size:1rem;border:2px solid var(--ink);transition:.15s}
+.btn.pri{background:var(--brand);border-color:var(--brand);color:#fff}.btn.pri:hover{background:var(--teal);border-color:var(--teal)}
+.btn.sec{color:var(--ink)}.btn.sec:hover{background:var(--ink);color:#fff}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero .cta{flex-wrap:nowrap}.hero .cta .btn{padding:12px 16px;font-size:.92rem;text-align:center}
 
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--chalk);
-    color:var(--text);
-    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height:1.55;
-  }
-  h1, h2, h3{
-    font-family:Charter, Georgia, "Times New Roman", serif;
-    font-weight:600;
-    margin:0;
-    color:var(--ink);
-  }
-  a{color:inherit;}
-  .wrap{
-    max-width:920px;
-    margin:0 auto;
-    padding:0 24px;
-  }
+/* Hero */
+.hero{padding:88px 0 72px;background:#FFF1DC}
+.alt{background:#F4F0FF}.warm{background:#FFF4E3}
+.hero .in{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+.bio{color:var(--soft);margin:14px 0 0;font-size:1.02rem;max-width:62ch}
+.hero h1{font-size:clamp(2.1rem,3.6vw,2.9rem);line-height:1.12}
+.sub{font-size:1.15rem;color:var(--soft);margin:20px 0 0}
+.phil p{margin:0}.phil{margin:18px 0 0;padding-left:14px;border-left:4px solid var(--coral);font-size:1rem;color:var(--txt)}
+.cover{margin:0;position:relative;transform:scale(.7);transform-origin:center}
+.cover img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%;border-radius:8px;background:#8a8f96}
+.cover::after{content:"";position:absolute;left:-12px;bottom:-12px;width:45%;height:45%;border-left:4px solid var(--amber);border-bottom:4px solid var(--amber);z-index:-1}
 
-  /* Header */
-  header{
-    position:sticky;
-    top:0;
-    background:rgba(240,239,234,0.92);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--rule);
-    z-index:10;
-  }
-  header .wrap{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding-top:16px;
-    padding-bottom:16px;
-  }
-  .mark{
-    font-family:Charter, Georgia, serif;
-    font-weight:600;
-    font-size:1.1rem;
-    color:var(--ink);
-    text-decoration:none;
-  }
-  nav a{
-    text-decoration:none;
-    margin-left:28px;
-    font-size:0.95rem;
-    color:var(--text-soft);
-    border-bottom:1px solid transparent;
-    padding-bottom:2px;
-  }
-  nav a:hover{
-    color:var(--ink);
-    border-bottom-color:var(--gold);
-  }
 
-  /* Hero */
-  .hero{
-    background:var(--ink);
-    color:var(--chalk);
-    background-image:
-      radial-gradient(circle, rgba(240,239,234,0.08) 1px, transparent 1px);
-    background-size:22px 22px;
-    padding:96px 0 80px;
-  }
-  .hero .eyebrow-line{
-    width:40px;
-    height:3px;
-    background:var(--gold);
-    margin-bottom:22px;
-  }
-  .hero h1{
-    color:var(--chalk);
-    font-size:clamp(2.1rem, 4.5vw, 3.1rem);
-    line-height:1.15;
-    max-width:14ch;
-  }
-  .hero p{
-    max-width:52ch;
-    color:#CBD1D9;
-    font-size:1.08rem;
-    margin-top:20px;
-  }
-  .hero .role{
-    margin-top:28px;
-    font-size:0.98rem;
-    color:var(--gold);
-  }
+/* Tools */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.tgrid h3{font-size:1.2rem;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:8px 16px;border-radius:999px;background:#fff;border:2px solid var(--c);color:var(--ink);font-weight:600;font-size:.95rem}
+@media (max-width:900px){.tgrid{grid-template-columns:1fr}}
 
-  section{padding:72px 0;}
-  section h2{
-    font-size:1.6rem;
-    margin-bottom:8px;
-  }
-  section > .wrap > p.lede{
-    color:var(--text-soft);
-    max-width:56ch;
-    margin-top:0;
-    margin-bottom:40px;
-  }
+/* Promise band */
+.promise{background:var(--brand);color:#fff;padding:96px 0;border:0;overflow:hidden}
+.proverb{font-family:var(--serif);font-size:clamp(1.25rem,2.6vw,1.7rem);color:#C7D2FE;margin:0 0 10px;line-height:1.4}
+.proverb .w{display:inline-block;opacity:0;transform:translateX(-28px);margin-right:.3em;transition:opacity .5s,transform .5s;transition-delay:calc(var(--i)*.13s)}
+.promise.go .proverb .w{opacity:1;transform:none}
+.ask,.keep{opacity:0;transform:translateY(18px);transition:opacity .8s,transform .8s}
+.ask{font-family:var(--serif);font-size:clamp(2rem,5vw,3.3rem);line-height:1.15;margin:34px 0 0;max-width:20ch;transition-delay:2.9s}
+.ask em{font-style:normal;color:var(--amber)}
+.keep{color:#EEF2FF;margin:22px 0 0;transition-delay:3.7s}
+.keep a{color:var(--amber);margin-left:8px}
+.promise.go .ask,.promise.go .keep{opacity:1;transform:none}
 
-  /* Work grid */
-  .work-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:28px;
-  }
-  .card{
-    background:#fff;
-    border-left:4px solid var(--gold);
-    padding:24px 26px;
-  }
-  .card .tag{
-    font-size:0.78rem;
-    color:var(--text-soft);
-    letter-spacing:0.02em;
-  }
-  .card h3{
-    font-size:1.15rem;
-    margin-top:8px;
-  }
-  .card p{
-    color:var(--text-soft);
-    font-size:0.95rem;
-    margin:10px 0 16px;
-  }
-  .card .stat{
-    font-size:0.88rem;
-    color:var(--ink);
-    font-weight:600;
-    margin-bottom:14px;
-  }
-  .card a.launch{
-    display:inline-block;
-    font-size:0.92rem;
-    text-decoration:none;
-    color:var(--ink);
-    border-bottom:1px solid var(--gold);
-    padding-bottom:1px;
-  }
-  .card a.launch:hover{color:var(--gold);}
+/* Flagship */
+.flag{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 8px 28px rgba(30,27,75,.12)}
+.flag .pic{min-height:420px;background:var(--coral);position:relative}
+.flag .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.flag .txt{padding:36px 40px}
+.mini{font:700 .8rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin:0 0 8px}
+.flag ul{margin:0 0 14px;padding-left:20px;color:var(--soft);font-size:1rem}.flag li{margin-bottom:4px}
+.flag h3{font-size:1.65rem;margin:0 0 16px}
+.flag p{margin:0 0 12px;color:var(--soft)}
+.flag p b{color:var(--ink)}
 
-  /* Process */
-  .process{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:28px;
-  }
-  .process .step .num{
-    font-family:Charter, Georgia, serif;
-    font-size:1.6rem;
-    color:var(--gold);
-  }
-  .process .step h3{
-    font-size:1.05rem;
-    margin-top:6px;
-  }
-  .process .step p{
-    color:var(--text-soft);
-    font-size:0.94rem;
-    margin-top:8px;
-  }
+/* Flip cards */
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px}
+.flip{perspective:1100px;cursor:pointer}
+.fc{position:relative;height:400px;transition:transform .6s;transform-style:preserve-3d}
+.flip.on .fc{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:10px;padding:24px;display:flex;flex-direction:column;overflow:auto}
+.front{background:var(--c);color:#fff;justify-content:flex-end}
+.front h3{color:#fff;font-size:1.5rem}
+.front span{font-size:1rem;opacity:.95;margin-top:6px}
+.front em{font-style:normal;font-size:.9rem;margin-top:18px;border-top:1px solid rgba(255,255,255,.4);padding-top:10px}
+.back{background:#fff;border:3px solid var(--c);transform:rotateY(180deg)}
+.back h4{margin:0 0 4px;color:var(--c);font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
+.back p{margin:0 0 14px;font-size:1rem}
 
-  /* About */
-  .about-grid{
-    display:grid;
-    grid-template-columns:1.4fr 1fr;
-    gap:40px;
-    align-items:start;
-  }
-  .about-grid p{
-    color:var(--text-soft);
-    font-size:1rem;
-    max-width:58ch;
-  }
-  .skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    padding:0;
-    margin:0;
-    list-style:none;
-  }
-  .skills li{
-    border:1px solid var(--rule);
-    padding:6px 12px;
-    font-size:0.86rem;
-    color:var(--text-soft);
-  }
+/* Sample cards */
+.projects{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.proj{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;border-radius:10px;background:var(--c);color:#fff;text-decoration:none}
+.proj img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.proj .label{position:absolute;left:0;right:0;bottom:0;padding:14px 20px;font-family:var(--serif);font-size:1.25rem;background:rgba(30,27,75,.88);transition:opacity .25s}
+.proj .over{position:absolute;inset:0;padding:24px;display:flex;flex-direction:column;justify-content:center;background:rgba(30,27,75,.93);opacity:0;transform:translateY(12px);transition:.3s}
+.proj h3{color:#fff;font-size:1.35rem;margin-bottom:8px}
+.proj p{margin:0 0 14px;color:#EEF2FF}
+.proj b{color:var(--amber)}
+.proj:hover img,.proj:focus-visible img{transform:scale(1.06)}
+.proj:hover .over,.proj:focus-visible .over{opacity:1;transform:none}
+.proj:hover .label,.proj:focus-visible .label{opacity:0}
+@media (hover:none){.proj .label{display:none}.proj .over{opacity:1;transform:none;inset:auto 0 0 0;justify-content:flex-end;background:rgba(30,27,75,.94)}}
 
-  /* Contact */
-  .contact{
-    background:var(--ink);
-    color:var(--chalk);
-  }
-  .contact h2{color:var(--chalk);}
-  .contact p{color:#CBD1D9; max-width:48ch;}
-  .contact a.email{
-    display:inline-block;
-    margin-top:20px;
-    font-size:1.1rem;
-    color:var(--gold);
-    text-decoration:none;
-    border-bottom:1px solid var(--gold);
-  }
-  .contact .links{
-    margin-top:28px;
-    display:flex;
-    gap:24px;
-    font-size:0.92rem;
-  }
-  .contact .links a{text-decoration:none; color:#CBD1D9;}
-  .contact .links a:hover{color:var(--gold);}
+.contact{background:var(--brand);border:0}
+.contact h2,.contact .lede{color:#fff}.contact .lede{color:#E0E7FF}
+.mail{display:inline-block;font-family:var(--serif);font-size:1.6rem;color:var(--amber);margin:6px 0 14px}
+.cl{display:flex;flex-wrap:wrap;gap:10px 28px;color:#EEF2FF;font-size:1rem}
+footer{margin-top:40px;font-size:.9rem;color:#C7D2FE}
 
-  footer{
-    padding:24px 0;
-    font-size:0.82rem;
-    color:var(--text-soft);
-    border-top:1px solid var(--rule);
-  }
-
-  @media (max-width: 680px){
-    .work-grid, .process, .about-grid{grid-template-columns:1fr;}
-    nav a{margin-left:16px; font-size:0.88rem;}
-    .hero{padding:72px 0 56px;}
-  }
+.projects.two{grid-template-columns:1fr 1fr}
+@media (min-width:1100px){.projects.three{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:900px){
+.shell{display:block}
+.rail{flex-direction:row;align-items:center;height:auto;padding:12px 18px;z-index:10}
+.rail .who,.meter span{display:none}
+.rail ol{margin:0;border:0;display:flex;gap:4px;overflow-x:auto}
+.rail li a{padding:6px 10px;border:0;margin:0;font-size:.9rem;white-space:nowrap}
+.rail li a.on{background:rgba(255,255,255,.18);border-radius:4px}
+.meter{position:absolute;left:0;right:0;bottom:0;margin:0}.bar{height:3px;border-radius:0;margin:0}}
+@media (max-width:760px){.hero .in,.flag{grid-template-columns:1fr}.cover img{aspect-ratio:16/10}.cover{margin:-50px 0}.flag .pic{min-height:220px}}
+@media (max-width:560px){.hero .cta{flex-wrap:wrap}}
+@media (max-width:640px){.in{padding:0 20px}section{padding:56px 0}.pgrid,.projects,.projects.two,.projects.three{grid-template-columns:1fr}.fc{height:420px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.proverb .w,.ask,.keep{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<div class="shell">
+<aside class="rail" aria-label="Page navigation">
+<a class="who" href="#top">Shamia Namagembe<small>Instructional Designer &amp; eLearning Developer</small></a>
+<nav><ol>
+<li><a href="#top" data-s="top">Start</a></li>
+<li><a href="#tools" data-s="tools">Tools</a></li>
+<li><a href="#flagship" data-s="flagship">Sample Training module</a></li>
+<li><a href="#samples" data-s="samples">Other samples</a></li>
+<li><a href="#gamified" data-s="gamified">Gamified projects</a></li>
+<li><a href="#projects" data-s="projects">Projects</a></li>
+<li><a href="#contact" data-s="contact">Contact</a></li>
+</ol></nav>
+<div class="meter"><span id="pct">0% complete</span><div class="bar"><i id="fill"></i></div></div>
+</aside>
+<main>
 
-<header>
-  <div class="wrap">
-    <a class="mark" href="#top">Shamia Namagembe</a>
-    <nav>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<div class="hero" id="top">
-  <div class="wrap">
-    <div class="eyebrow-line"></div>
-    <h1>Learning experiences people actually finish.</h1>
-    <p>I design and build eLearning that turns dense subject matter into courses learners can follow, remember, and use on the job.</p>
-    <div class="role">Instructional Designer &amp; eLearning Developer — Articulate Storyline 360</div>
-  </div>
+<section class="hero" id="top"><div class="in">
+<div>
+<h1>I craft learning experiences where knowledge becomes muscle memory</h1>
+<p class="sub">Hi, I’m Shamia, an instructional designer and eLearning developer. I design and build interactive and gamified eLearning for all audiences, depending on their needs.</p>
+<div class="phil"><h4 class="mini">My approach</h4><p>Instructional design is how I turn what people need to learn into a clear plan that helps them learn it. I start by finding out who the learners are and what they struggle with. Then I set clear goals, choose activities and tests that build the right skills, and plan the flow of the lessons.</p></div>
+<p class="bio">eLearning development is where I turn that plan into a working online course. I use tools like Articulate Storyline 360 to build the interactions, scenarios, simulations and quizzes, then I test the course and package it so it runs on any learning platform (LMS).</p>
+<p class="bio">Without the design, a course is just content on slides. Without the build, a good plan stays on paper. I do both, so what I plan is what learners actually get.</p>
+<div class="cta"><a class="btn pri" href="#flagship">See my sample training module</a><a class="btn sec" href="Shamia_Namagembe_CV_eLearning%20Developer.pdf" download="Shamia_Namagembe_CV_eLearning Developer.pdf">Download CV (PDF)</a></div>
 </div>
+<figure class="cover"><img src="cover.png" alt="Portrait of Shamia Namagembe" width="1672" height="941" fetchpriority="high"></figure>
+</div></section>
 
-<section id="work">
-  <div class="wrap">
-    <h2>Selected work</h2>
-    <p class="lede">A few recent courses, built end-to-end from learning objectives to published output.</p>
+<section id="tools" class="alt"><div class="in">
+<h2>Tools and languages I use</h2>
+<p class="lede">The software and code I use to design, build and publish eLearning.</p>
+<div class="tgrid">
+<div><h3>Authoring and animation tools</h3><div class="chips" style="--c:var(--violet)"><span class="chip">Articulate Storyline 360</span><span class="chip">Articulate Rise</span><span class="chip">Adobe Animate</span><span class="chip">Adobe After Effects</span></div></div>
+<div><h3>Languages</h3><div class="chips" style="--c:var(--teal)"><span class="chip">JavaScript</span><span class="chip">HTML5</span><span class="chip">CSS</span></div></div>
+<div><h3>Design and delivery</h3><div class="chips" style="--c:var(--coral)"><span class="chip">Storyboarding</span><span class="chip">Scenario scripting</span><span class="chip">LMS packaging</span><span class="chip">Testing and QA</span></div></div>
+</div></div></section>
 
-    <div class="work-grid">
-      <div class="card">
-        <div class="tag">Customer handling · Storyline 360</div>
-        <h3>Customer Representative Training</h3>
-        <div class="stat">Completion rate up from 61% to 94%</div>
-        <p>Rebuilt a text-heavy annual compliance module into a scenario-based course with branching decisions and a scored knowledge check.</p>
-        <a class="launch" href="De-escalating-an-angry-customer/story.html">Launch course</a>
-      </div>
+<section id="flagship"><div class="in">
+<h2>Customer Training Refresher course</h2>
+<article class="flag">
+<div class="pic"><img src="images/customer-service.jpg" alt="" onerror="this.remove()"></div>
+<div class="txt">
+<h3>De-escalating an angry customer</h3>
+<p><b>The problem:</b> Frontline customer service representatives struggle with handling emotionally charged customer interactions, which results in an increase in escalations to supervisors.</p>
+<h4 class="mini">The scenario</h4>
+<p>The learner plays Alex, a customer service representative at a fictional online retailer called Northfield Retail. The company is generic enough to feel realistic without tying it to a real brand.</p>
+<p><b>The customer: Priyah Shah</b></p>
+<ul>
+<li>She ordered a laptop for her son's school exams and paid for expedited shipping.</li>
+<li>It arrives 4 days late, after the exam period.</li>
+<li>She has already been transferred once today, so her first-call frustration is compounding.</li>
+<li>She is not naturally aggressive. She is a normally reasonable person who is at her limit, which makes her more realistic and relatable than an over-the-top "irate customer".</li>
+</ul>
+<p><b>How I solved it:</b> A branching story in Storyline 360 where learners make decisions and get feedback straight away.</p>
+<a class="btn pri" href="De-escalating-an-angry-customer/story.html">Start course</a>
+</div></article>
+</div></section>
 
-      <div class="card">
-        <div class="tag">OSHA safety training · Storyline 360</div>
-        <h3>Containing a chemical spill</h3>
-        <div class="stat">Onboarding time cut by 3 days</div>
-        <p>Interactive click-through simulation of the CRM, paired with short knowledge checks after each core workflow.</p>
-        <a class="launch" href="How-to-contain-an-oil-spill-incident/story.html">Launch course</a>
-      </div>
+<section id="samples" class="alt"><div class="in">
+<h2>Other eLearning sample projects</h2>
+<p class="lede">Try them yourself. Hover over a card to read about it, then click to open it.</p>
+<div class="projects three">
+<a class="proj" style="--c:var(--teal)" href="How-to-contain-an-oil-spill-incident/story.html"><img src="images/oil-spill.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="label">Containing an oil spill incident</span><span class="over"><h3>Containing an oil spill incident</h3><p>Safety training that walks learners through containment decisions.</p><b>Open the course &rarr;</b></span></a>
+<!-- TODO: set the real title and path for the two cards below -->
+<a class="proj" style="--c:var(--violet)" href="samples/virtual-lab/story.html"><img src="images/virtual-lab.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="label">Virtual chemistry lab</span><span class="over"><h3>Virtual chemistry lab</h3><p>Practise a chemistry experiment online, one step at a time.</p><b>Open the course &rarr;</b></span></a>
+<a class="proj" style="--c:var(--sky)" href="samples/video-tutorial/index.html"><img src="images/video-tutorial.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="label">Screen-recorded tutorial</span><span class="over"><h3>Screen-recorded tutorial</h3><p>A short video that shows how to do a task, placed inside a lesson.</p><b>Open the sample &rarr;</b></span></a>
+</div></div></section>
 
-      <div class="card">
-        <div class="tag">Sales enablement · Storyline 360</div>
-        <h3>Product Launch Playbook</h3>
-        <div class="stat">Rolled out to 400+ reps in one week</div>
-        <p>Self-paced module covering positioning, objection handling, and a practice conversation with branching dialogue.</p>
-        <a class="launch" href="course3/index.html">Launch course</a>
-      </div>
+<section class="promise" id="promiseBand"><div class="in">
+<p class="proverb">All work and no play makes Jack a dull boy.</p>
+<p class="proverb">All play and no work makes Jack a mere toy.</p>
+<p class="ask">What if learners could <em>play and learn</em> at the same time?</p>
+<p class="keep">That's the promise I keep in every course.<a href="#gamified">See the proof &darr;</a></p>
+</div></section>
 
-      <div class="card">
-        <div class="tag">Leadership development · Storyline 360</div>
-        <h3>Coaching Conversations Series</h3>
-        <div class="stat">Three-part microlearning series</div>
-        <p>Short, video-anchored lessons with reflection prompts, designed to be completed in under 10 minutes each.</p>
-        <a class="launch" href="course4/index.html">Launch course</a>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="gamified" class="warm"><div class="in">
+<h2>Gamified sample projects</h2>
+<p class="lede">Two examples of learning that feels like play. Hover over a card to read about it, then click to try it.</p>
+<!-- TODO: if the science game folder is also in the root, remove "samples/" from its path -->
+<div class="projects two">
+<a class="proj" style="--c:var(--violet)" href="maze-of-whole-numbers/index.html"><img src="images/maze.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="label">The maze of whole numbers</span><span class="over"><h3>The maze of whole numbers</h3><p>A maths game where you drive your avatar through a maze into the correct answer to each question.</p><b>Play the game &rarr;</b></span></a>
+<a class="proj" style="--c:var(--coral)" href="samples/science-game/story.html"><img src="images/science-game.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="label">Gamified science practice</span><span class="over"><h3>Gamified science practice</h3><p>Revision questions turned into a game, so practice feels like play.</p><b>Play the game &rarr;</b></span></a>
+</div></div></section>
 
-<section>
-  <div class="wrap">
-    <h2>How I work</h2>
-    <p class="lede">A short, consistent process from brief to published course.</p>
-    <div class="process">
-      <div class="step">
-        <div class="num">01</div>
-        <h3>Analyze &amp; design</h3>
-        <p>Clarify the performance gap, define objectives, and storyboard the learning flow before opening any tool.</p>
-      </div>
-      <div class="step">
-        <div class="num">02</div>
-        <h3>Build &amp; prototype</h3>
-        <p>Develop in Storyline with a working prototype early, so stakeholders can react to something real, not a script.</p>
-      </div>
-      <div class="step">
-        <div class="num">03</div>
-        <h3>Test &amp; refine</h3>
-        <p>Run it with real users, fix friction points, then publish and track how it performs after launch.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="projects" class="alt"><div class="in">
+<h2>Projects I have delivered</h2>
+<p class="lede">Click a card to flip it and see the problem I solved and how I solved it.</p>
+<div class="pgrid">
 
-<section id="about">
-  <div class="wrap">
-    <div class="about-grid">
-      <div>
-        <h2>About</h2>
-        <p>I'm an instructional designer and eLearning developer focused on courses that hold up after the "wow, nice interaction" moment , ones people can actually complete, recall, and apply. My background spans corporate compliance, software onboarding, and sales enablement, usually working closely with subject matter experts who know the content but not the tools.</p>
-        <p>Outside of Storyline, I work in Camtasia for video editing, Figma for visual design and wireframes, and whatever LMS a client already has in place.</p>
-      </div>
-      <div>
-        <h3 style="font-size:1rem; margin-bottom:14px;">Tools &amp; skills</h3>
-        <ul class="skills">
-          <li>Articulate Storyline 360</li>
-          <li>Rise 360</li>
-          <li>SCORM &amp; xAPI</li>
-          <li>Camtasia</li>
-          <li>Figma</li>
-          <li>Instructional design (ADDIE)</li>
-          <li>Scenario-based learning</li>
-          <li>Voiceover &amp; scripting</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+<article>
+<div class="flip" role="button" tabindex="0" aria-pressed="false" style="--c:var(--teal)"><div class="fc">
+<div class="face front"><h3>Virtual chemistry labs</h3><span>CyberSchool Technology Solutions</span><em>Click to flip &rarr;</em></div>
+<div class="face back"><h4>The problem</h4><p>Many schools lack lab equipment, so students could not practise chemistry experiments.</p><h4>How I solved it</h4><p>I wrote storyboards and scenario scripts, then built simulated lab procedures in Storyline 360 with gamified activities. Subject experts reviewed each version.</p></div>
+</div></div>
+</article>
 
-<section class="contact" id="contact">
-  <div class="wrap">
-    <h2>Let's build something</h2>
-    <p>Open to freelance projects and full-time roles in instructional design and eLearning development.</p>
-    <a class="email" href="mailto:shamienamagembe@gmail.com">shamienamagembe@gmail.com</a>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/shamia-code" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </div>
-</section>
+<article>
+<div class="flip" role="button" tabindex="0" aria-pressed="false" style="--c:var(--violet)"><div class="fc">
+<div class="face front"><h3>Mastercard Foundation eLearning</h3><span>Busitema and Mbarara Universities</span><em>Click to flip &rarr;</em></div>
+<div class="face back"><h4>The problem</h4><p>University students in engineering and medicine needed technical and clinical content they could work through online.</p><h4>How I solved it</h4><p>I storyboarded each module with subject experts, built it in Storyline 360 with JavaScript, and worked with animators so every animation served a learning goal.</p></div>
+</div></div>
+</article>
 
-<footer>
-  <div class="wrap">
-    &copy; 2026 Shamia Namagembe. Built and published from GitHub via Cloudflare Pages.
-  </div>
-</footer>
+<article>
+<div class="flip" role="button" tabindex="0" aria-pressed="false" style="--c:var(--sky)"><div class="fc">
+<div class="face front"><h3>Flash to mobile-ready courses</h3><span>Course migration for clients</span><em>Click to flip &rarr;</em></div>
+<div class="face back"><h4>The problem</h4><p>Older Flash and Animate courses would not run on modern phones and browsers.</p><h4>How I solved it</h4><p>I rebuilt the assets in HTML5 and moved the courses into Storyline 360, retesting every interaction, branch and video after each fix.</p></div>
+</div></div>
+</article>
 
+<article>
+<div class="flip" role="button" tabindex="0" aria-pressed="false" style="--c:var(--coral)"><div class="fc">
+<div class="face front"><h3>MTN Uganda IT troubleshooting</h3><span>IT Operations training</span><em>Click to flip &rarr;</em></div>
+<div class="face back"><h4>The problem</h4><p>IT operations staff needed a dependable way to find faults step by step.</p><h4>How I solved it</h4><p>I wrote step-by-step diagnostic content with decision points and practice questions, then supported the quality review.</p></div>
+</div></div>
+</article>
+
+</div></div></section>
+
+<section class="contact" id="contact"><div class="in">
+<h2>Let's build your next course</h2>
+<p class="lede">Open to freelance projects and full-time roles in instructional design and eLearning development.</p>
+<a class="mail" href="mailto:shamienamagembe@gmail.com">shamienamagembe@gmail.com</a>
+<div class="cl"><span>Phone: +256 774 102 693</span><span>Based in Kampala, Uganda</span></div>
+<div class="cta"><a class="btn" style="background:var(--amber);border-color:var(--amber);color:var(--ink)" href="Shamia_Namagembe_CV_eLearning%20Developer.pdf" download="Shamia_Namagembe_CV_eLearning Developer.pdf">Download my CV</a></div>
+<footer>&copy; 2026 Shamia Namagembe</footer>
+</div></section>
+
+</main></div>
+<script>
+const fill=document.getElementById('fill'),pct=document.getElementById('pct');
+function progress(){const h=document.documentElement,m=h.scrollHeight-h.clientHeight,p=m>0?Math.round(h.scrollTop/m*100):0;fill.style.width=p+'%';pct.textContent=p+'% complete'}
+addEventListener('scroll',progress,{passive:true});progress();
+const links=[...document.querySelectorAll('.rail a[data-s]')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.dataset.s===e.target.id));const a=links.find(l=>l.dataset.s===e.target.id);if(a&&innerWidth<=900)a.scrollIntoView({inline:'center',block:'nearest'})}}),{rootMargin:'-40% 0px -55% 0px'});
+links.forEach(l=>io.observe(document.getElementById(l.dataset.s)));
+document.querySelectorAll('.flip').forEach(f=>{
+const t=()=>{f.classList.toggle('on');f.setAttribute('aria-pressed',f.classList.contains('on'))};
+f.addEventListener('click',t);f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}})});
+let n=0;document.querySelectorAll('.proverb').forEach(p=>{p.setAttribute('aria-label',p.textContent);p.innerHTML=p.textContent.split(' ').map(w=>'<span class="w" aria-hidden="true" style="--i:'+(n++)+'">'+w+'</span>').join('')});
+const band=document.getElementById('promiseBand');
+new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){band.classList.add('go');o.disconnect()}}),{threshold:.45}).observe(band);
+</script>
 </body>
 </html>

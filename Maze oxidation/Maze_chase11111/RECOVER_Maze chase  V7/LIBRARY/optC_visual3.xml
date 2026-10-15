@@ -1,0 +1,69 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="optC_visual3" itemID="69d76c64-0000020d" lastModified="1775808260">
+  <timeline>
+    <DOMTimeline name="optC_visual3" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!1675 810|1675 -810!1675 -810|-1675 -810!-1675 -810|-1675 810!-1675 810|1675 810"/>
+                    <Edge cubics="!-1675 -810(;-1675,-810 -1675,810 -1675,810q-1675 -810 -1675 810);"/>
+                    <Edge cubics="!1675 810(;1675,810 -1675,810 -1675,810q1675 810 -1675 810);"/>
+                    <Edge cubics="!1675 810(;1675,810 1675,-810 1675,-810q1675 810 1675 -810);"/>
+                    <Edge cubics="!1675 -810(;1675,-810 -1675,-810 -1675,-810q1675 -810 -1675 -810);"/>
+                  </edges>
+                </DOMShape>
+                <DOMDynamicText fontRenderingMode="standard" width="117.3" height="24.8" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="-64.7" ty="-37.15"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Solids</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="21.9" size="18" bitmapSize="360" face="Verdana"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText fontRenderingMode="standard" width="117.3" height="24.8" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="-63.35" ty="-12.7"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Liquids</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="21.9" size="18" bitmapSize="360" face="Verdana"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText fontRenderingMode="standard" width="117.3" height="24.8" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="-65" ty="12.2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Gases</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineHeight="21.9" size="18" bitmapSize="360" face="Verdana"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

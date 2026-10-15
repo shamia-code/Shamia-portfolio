@@ -1,0 +1,142 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="optD_visual2" itemID="69d614a6-0000004a" lastModified="1775650942">
+  <timeline>
+    <DOMTimeline name="optD_visual2" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-1523 -907S2|1810 -907!1810 -907|1810 1013!1810 1013|-1523 1013!-1523 1013|-1523 -907"/>
+                    <Edge cubics="!-1523 -907(;-1523,-907 1810,-907 1810,-907q-1523 -907 1810 -907);"/>
+                    <Edge cubics="!1810 1013(;1810,1013 -1523,1013 -1523,1013q1810 1013 -1523 1013);"/>
+                    <Edge cubics="!-1523 1013(;-1523,1013 -1523,-907 -1523,-907q-1523 1013 -1523 -907);"/>
+                    <Edge cubics="!1810 -907(;1810,-907 1810,1013 1810,1013q1810 -907 1810 1013);"/>
+                  </edges>
+                </DOMShape>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="5.45451354980469" d="5.33331298828125" tx="-17.8" ty="7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.05" y="6.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="5.45452880859375" d="5.375" tx="-18.85" ty="13.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="5.45452880859375" d="5.375" tx="-19.45" ty="19"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="5.45452880859375" d="5.375" tx="-10.25" ty="5.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05" y="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="5.45443725585938" d="5.2498779296875" tx="-12.6" ty="13.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.1" y="2.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="5.45452880859375" d="5.375" tx="-5.3" ty="11.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05" y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="5.45452880859375" d="5.375" tx="-4.65" ty="3.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="5.45452880859375" d="5.375" tx="-1.5" ty="7.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="5.45452880859375" d="5.375" tx="3.65" ty="6.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.05" y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="5.45452880859375" d="4.99996948242188" tx="3.3" ty="11.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="4.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="5.45452880859375" d="5.375" tx="-0.5" ty="16.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.4" y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="0.125" d="0.125" tx="0.3" ty="20.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.6" y="0.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="5.45452880859375" d="5.375" tx="-11.65" ty="18.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="dot">
+                  <matrix>
+                    <Matrix a="5.4542236328125" d="4.99969482421875" tx="-4.2" ty="18.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.45" y="9.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

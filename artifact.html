@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design process | Shamia Namagembe</title>
+<style>
+:root{--ink:#12213B;--paper:#F6F5F1;--teal:#0B7A75;--amber:#E2A233;--soft:#51596B}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:#1D2433;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+header{background:var(--ink);padding:18px 24px}
+header a{color:#fff;text-decoration:none;font-weight:600}
+main{max-width:760px;margin:0 auto;padding:48px 24px 80px}
+h1,h2{font-family:Charter,Georgia,serif;color:var(--ink);font-weight:600}
+h1{font-size:2.2rem;margin:6px 0 4px}
+.kicker{color:var(--teal);font-weight:700;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase}
+.proj{color:var(--soft);margin:0 0 28px}
+h2{font-size:1.25rem;margin:30px 0 8px;border-left:4px solid var(--amber);padding-left:12px}
+ul{padding-left:20px}li{margin-bottom:6px}
+img{max-width:100%;border-radius:8px;margin-top:10px;display:block}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:40px}
+.tabs a{padding:8px 14px;border:2px solid var(--ink);border-radius:4px;text-decoration:none;color:var(--ink);font-size:.9rem;font-weight:600}
+.tabs a.on,.tabs a:hover{background:var(--ink);color:#fff}
+</style>
+</head>
+<body>
+<header><a href="index.html#projects">&larr; Back to portfolio</a></header>
+<main id="m"></main>
+<script>
+const P={
+chem:{n:"Virtual chemistry labs",c:"Students in secondary schools without lab equipment needed a safe way to practise chemistry experiments online.",notes:""},
+mcf:{n:"Mastercard Foundation eLearning",c:"University students in engineering and medicine needed technical and clinical content in interactive online modules.",notes:""},
+mig:{n:"Flash to mobile-ready courses",c:"Older Flash and Adobe Animate courses had to be rebuilt so they work on modern phones and browsers.",notes:""},
+mtn:{n:"MTN Uganda IT troubleshooting",c:"IT operations staff needed step-by-step help to diagnose faults.",notes:""}};
+const T={
+needs:{n:"Needs analysis",w:"A needs analysis finds out who the learners are, what they already know, and what is going wrong. It makes sure the course fixes the real problem.",s:["Who are the learners and where will they learn?","What should they be able to do after the course?","What is stopping them today?"]},
+addie:{n:"ADDIE / SAM outline",w:"ADDIE and SAM are step-by-step plans for making a course. ADDIE goes Analyse, Design, Develop, Implement, Evaluate. SAM builds in short rounds, so people can react to something real early.",s:["Plan the stages and who reviews each one","Build a first version early and test it","Improve it in rounds before release"]},
+action:{n:"Action map",w:"An action map starts with the result the organisation wants, then lists the real-life actions people must take to get it. Only activities that help those actions go into the course.",s:["State the goal in plain numbers or results","List what people must do on the job","Design practice for each action, and drop the rest"]},
+story:{n:"Storyboard",w:"A storyboard is the course on paper before it is built. It shows each screen, what the learner sees and does, the words on screen, and what happens after each choice.",s:["Sketch every screen and its purpose","Write the script and the feedback for each choice","Get subject experts to approve it before building"]}};
+const q=new URLSearchParams(location.search),p=P[q.get('p')]||P.chem,tk=T[q.get('t')]?q.get('t'):'needs',t=T[tk],pk=P[q.get('p')]?q.get('p'):'chem';
+document.title=t.n+" | "+p.n;
+let h='<div class="kicker">Design process</div><h1>'+t.n+'</h1><p class="proj">Project: '+p.n+'</p>'
++'<h2>What it is</h2><p>'+t.w+'</p><h2>The questions it answers</h2><ul>'+t.s.map(x=>'<li>'+x+'</li>').join('')+'</ul>'
++'<h2>On this project</h2><p>'+p.c+'</p>'
++(p.notes?'<h2>My notes</h2><p>'+p.notes+'</p>':'')
++'<img src="artifacts/'+pk+'-'+tk+'.jpg" alt="'+t.n+' for '+p.n+'" onerror="this.remove()">'
++'<div class="tabs">'+Object.keys(T).map(k=>'<a class="'+(k===tk?'on':'')+'" href="?p='+pk+'&t='+k+'">'+T[k].n+'</a>').join('')+'</div>';
+document.getElementById('m').innerHTML=h;
+</script>
+</body>
+</html>
