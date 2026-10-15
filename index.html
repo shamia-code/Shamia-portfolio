@@ -62,14 +62,14 @@ h2{font-size:2.1rem;margin-bottom:10px}
 @media (max-width:900px){.tgrid{grid-template-columns:1fr}}
 
 /* Promise band */
-.promise{background:var(--brand);color:#fff;padding:96px 0;border:0;overflow:hidden}
-.proverb{font-family:var(--serif);font-size:clamp(1.25rem,2.6vw,1.7rem);color:#C7D2FE;margin:0 0 10px;line-height:1.4}
+.promise{background:var(--brand);color:#fff;padding:32px 0;border:0;overflow:hidden;min-height:100vh;min-height:100svh;display:flex;align-items:center}.promise .in{width:100%}
+.proverb{font-family:var(--serif);font-size:clamp(.95rem,min(2vw,3.2vh),1.3rem);color:#C7D2FE;margin:0 0 8px;line-height:1.4}
 .proverb .w{display:inline-block;opacity:0;transform:translateX(-28px);margin-right:.3em;transition:opacity .5s,transform .5s;transition-delay:calc(var(--i)*.13s)}
 .promise.go .proverb .w{opacity:1;transform:none}
 .ask,.keep{opacity:0;transform:translateY(18px);transition:opacity .8s,transform .8s}
-.ask{font-family:var(--serif);font-size:clamp(2rem,5vw,3.3rem);line-height:1.15;margin:34px 0 0;max-width:20ch;transition-delay:2.9s}
+.ask{font-family:var(--serif);font-size:clamp(1.5rem,min(4vw,7vh),2.7rem);line-height:1.15;margin:min(28px,3vh) 0 0;max-width:24ch;transition-delay:2.9s}
 .ask em{font-style:normal;color:var(--amber)}
-.keep{color:#EEF2FF;margin:22px 0 0;transition-delay:3.7s}
+.keep{color:#EEF2FF;margin:min(18px,2.5vh) 0 0;font-size:.95rem;transition-delay:3.7s}
 .keep a{color:var(--amber);margin-left:8px}
 .promise.go .ask,.promise.go .keep{opacity:1;transform:none}
 
@@ -276,7 +276,7 @@ const t=()=>{f.classList.toggle('on');f.setAttribute('aria-pressed',f.classList.
 f.addEventListener('click',t);f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}})});
 let n=0;document.querySelectorAll('.proverb').forEach(p=>{p.setAttribute('aria-label',p.textContent);p.innerHTML=p.textContent.split(' ').map(w=>'<span class="w" aria-hidden="true" style="--i:'+(n++)+'">'+w+'</span>').join('')});
 const band=document.getElementById('promiseBand');
-new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){band.classList.add('go');o.disconnect()}}),{threshold:.45}).observe(band);
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&e.intersectionRatio>=.45)band.classList.add('go');else if(e.intersectionRatio===0)band.classList.remove('go')}),{threshold:[0,.45]}).observe(band);
 </script>
 </body>
 </html>
